@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Rom1du62</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #667eea;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 1s ease 0.4s backwards;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        section {
+            background: white;
+            margin: 40px 0;
+            padding: 60px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #667eea;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-item {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .skill-item:hover {
+            transform: scale(1.05);
+        }
+
+        .skill-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            margin-top: 40px;
+            border-radius: 20px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Rom1du62</div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero" id="accueil">
+        <div class="hero-content">
+            <h1>Bonjour, je suis Romain</h1>
+            <p>Data Analyst Junior mais passionné par la Data</p>
+            <a href="#projets" class="btn">Découvrir mes projets</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                <p>Je suis passionné par la donnée, et tout le potentiel que l'on peut découvrir.</p>
+                <p style="margin-top: 20px;">Actuellement basé dans les Hauts-de-France, je suis en recherche constante de nouveaux défis, et d'opportunités d'apprentissage.</p>
+            </div>
+        </section>
+
+        <section id="projets">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🚀 Projet 1</h3>
+                    <p>Description de votre premier projet. Expliquez les technologies utilisées et les défis relevés.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>💡 Projet 2</h3>
+                    <p>Description de votre deuxième projet. Mettez en avant vos compétences et votre créativité.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>🎨 Projet 3</h3>
+                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Database</span>
+                        <span class="tag">Cloud</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="competences">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <p>Pandas, Numpy, Scikit Learn, Matplotlib, Seaborn, Scipy</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Outils</h3>
+                    <p>PowerBI, Knime; Python, Excel, Git</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Base de données</h3>
+                    <p>MySQL, SQL Lite, PostgreSQL</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Analyse</h3>
+                    <p>PCA, Clustering, Régression</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Me Contacter</h2>
+            <div class="contact-content">
+                <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute opportunité de collaboration !</p>
+                <div class="contact-links">
+                    <a href="https://github.com/Rom1du62" class="contact-link" target="_blank">
+                        <span>📱</span> GitHub
+                    </a>
+                    <a href="mailto:ramatromain@yahoo.fr" class="contact-link">
+                        <span>✉️</span> Email
+                    </a>
+                    <a href="https://www.linkedin.com/in/romain-ramat-470aba26/" class="contact-link" target="_blank">
+                        <span>💼</span> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Rom1du62. Tous droits réservés.</p>
+        </footer>
+    </div>
+</body>
+</html>
