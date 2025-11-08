@@ -46,7 +46,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            background: linear-gradient(135deg, #667eea 0%, #141414 100%);
+            background: linear-gradient(135deg, #000000 0%, #000000 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -109,7 +109,7 @@
         }
 
         section {
-            background: white;
+            background: rgb(29, 28, 29);
             margin: 40px 0;
             padding: 60px 20px;
             border-radius: 20px;
@@ -171,6 +171,22 @@
             gap: 10px;
         }
 
+        .tag-hardskills {
+            background: rgb(138, 67, 35);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #ffffff;
+        }
+        
+        .tag-softsills {
+            background: rgb(231, 179, 82);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: #000000;
+        }
+
         .tag {
             background: white;
             padding: 5px 15px;
@@ -178,7 +194,6 @@
             font-size: 0.9rem;
             color: #667eea;
         }
-
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -217,6 +232,30 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
+        .veille-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .Mes_veilles {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .veille-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: transform 0.3s;
+        }
 
         .contact-link {
             display: flex;
@@ -224,7 +263,7 @@
             gap: 10px;
             padding: 15px 30px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            color: rgb(255, 255, 255);
             text-decoration: none;
             border-radius: 50px;
             transition: transform 0.3s;
@@ -281,7 +320,7 @@
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
-                <li><a href="#projets">Projets</a></li>
+                <li><a href="#projets et cas pratiques">Projets</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -291,7 +330,8 @@
     <div class="hero" id="accueil">
         <div class="hero-content">
             <h1>Bonjour, et bienvenue sur mon portfolio</h1>
-            <p>Data Analyst Junior mais expérimenté par le nombre important de projet réalisé durant ses études</p>
+            <p>Ma passion pour la data est celle de la compréhension : comprendre le réel, l’anticiper et agir de manière plus intelligente.</p>
+            <p>Je conçois l’analyse de données comme un outil d’aide à la décision : clair, rigoureux et orienté résultats, au service de l’amélioration continue et de l’impact réel.</p>
             <a href="#projets" class="btn">Découvrir mes projets</a>
         </div>
     </div>
@@ -300,8 +340,8 @@
         <section id="about">
             <h2>À propos de moi</h2>
             <div class="about-content">
-                <p>Je suis passionné par le monde de la data, et tout le potentiel que l'on peut découvrir au dela d'une simple impressions ses usages sont multiples et vont bien au dela du monde visible..</p>
-                <p style="margin-top: 20px;">Actuellement basé dans les Hauts-de-France, je suis en recherche constante de nouveaux défis, et d'opportunités d'apprentissage.</p>
+                <p>Lorsque je demande à Chat GPT de me décrire en 10 mots sur l'ensemble de nos conversationw, il me répond : </p>
+                <p style="margin-top: 20px;">Curieux, Méthodique, Réfléchi, Perséverant, Analytique, Organisé ,Passionné, Technophile, Créatif et Exigeant 😎.</p>
             </div>
         </section>
 
@@ -309,45 +349,54 @@
             <h2>Mes Projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>🚀 Projet 1</h3>
+                    <h3>🚀 Analyse des données d'un site e-commerce</h3>
                     <p>Manipulation de données, élaboration de dashboard excel et interprétation des indicateurs.</p>
                     <div class="project-tags">
-                        <span class="tag">EXCEL</span>
-                        <span class="tag">Storytelling</span>
-                        <span class="tag">Graphique</span>
+                        <span class="tag-hardskills">Dashboard EXCEL</span>
+                        <span class="tag-hardskills">Support PowerPoint</span>
+                        <span class="tag-softsills">Proposer Storytelling</span>
+                        <span class="tag-softsills">Interprétation de plusieurs Graphiques et des résultats</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>💡 Projet 2</h3>
-                    <p>Base de données et requêtes SQL.</p>
+                    <h3>💡 Base de données et requêtes SQL</h3>
+                    <p>Modélisation et interrogation d'une base de donnée en SQL</p>
                     <div class="project-tags">
-                        <span class="tag">EXCEL</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">API</span>
+                        <span class="tag-hardskills">SQL Lite Studio</span>
+                        <span class="tag-hardskills">Power Architect</span>
+                        <span class="tag-hardskills">Dictionnaire de données</span>
+                        <span class="tag-softsills">Expliquer clairement les résultats obtenus</span>
+                    </div>
+                 <a href="https://github.com/ton-username/ton-repo" target="_blank" rel="noopener noreferrer" class="project-link">
+            Voir sur GitHub →
+                </a>
+                </div>
+
+                <div class="project-card">
+                    <h3>🥗 Etude sur l'alimentation dans le monde</h3>
+                    <p>Manipulation de plusieurs fichiers csv et interprétation des données avec PANDAS</p>
+                    <div class="project-tags">
+                        <span class="tag-hardskills">Python</span>
+                        <span class="tag-hardskills">Pandas</span>
+                        <span class="tag-hardskills">Matplotlib</span>
+                        <span class="tag-hardskills">Seaborn</span>
+                        <span class="tag-softsills">Vulgarisation des résultats</span>
+                        <span class="tag-softsills">Curiosité</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <h3>🧠 Projet 3</h3>
-                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
+                    <h3>📊 Data dans l'immobilier</h3>
+                    <p>Modélisation des données en respectant les formes normales (1, 2 et 3NF).</p>
                     <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Database</span>
-                        <span class="tag">Cloud</span>
+                        <span class="tag-hardskills">Gestion d'une dataBase</span>
+                        <span class="tag-hardskills">Requêtes SQL</span>
+                        <span class="tag-softsills">Compréhension du besoin métier</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>📊 Projet 4</h3>
-                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
-                    <div class="project-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">Database</span>
-                        <span class="tag">Cloud</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>📈 Projet 5</h3>
+                    <h3>📈 Analyse des données Bottleneck</h3>
                     <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
@@ -373,6 +422,7 @@
                         <span class="tag">Cloud</span>
                     </div>
                 </div>
+                <div class="project-card">
                     <h3>🐓 Projet 8</h3>
                     <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
                     <div class="project-tags">
@@ -385,7 +435,7 @@
         </section>
 
         <section id="competences">
-            <h2>Mes Compétences</h2>
+            <h2>Mes Compétences à votre service</h2>
             <div class="skills-grid">
                 <div class="skill-item">
                     <h3>Python</h3>
@@ -393,28 +443,27 @@
                 </div>
                 <div class="skill-item">
                     <h3>Outils</h3>
-                    <p>PowerBI, Knime; Python, Excel, Git</p>
+                    <p>PowerBI, Knime; Python, Excel, SQL Lite, Power Architect,  Git et GitHub</p>
                 </div>
                 <div class="skill-item">
                     <h3>Base de données</h3>
-                    <p>MySQL, SQL Lite, PostgreSQL</p>
+                    <p>SQL, MySQL, PostgreSQL</p>
                 </div>
                 <div class="skill-item">
                     <h3>Machine Learning</h3>
-                    <p>PCA, Clustering, Régression Linéaire et Logisique</p>
+                    <p>PCA, Clustering, Régression Linéaire et Régression Logisique</p>
                 </div>
             </div>
         </section>
         <section id="Veille">
             <h2>Mes veilles</h2>
-            <div class="Mes références">
-                <div class="veille">
+            <div class="Mes_veilles">
                     <p>Mes références pour une veille efficace !</p>
                 <div class="veille-links">
-                    <a href="https://feedly.com/i/my/me" class="veille-links" target="_blank">
+                    <a href="https://feedly.com/i/my/me" class="veille-link" target="_blank">
                         <span>📱</span> feedly
                     </a>
-                    <a href="https://wakelet.com/workspace/DbkeZgnXn3_-HontLbtaS/collections" class="veille-links">
+                    <a href="https://wakelet.com/workspace/DbkeZgnXn3_-HontLbtaS/collections" class="veille-link" target="_blank">
                         <span>✉️</span> wakelet
                     </a>
                 </div>
