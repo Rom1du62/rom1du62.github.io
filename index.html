@@ -46,10 +46,7 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
-            background: linear-gradient(135deg, #000000 0%, #000000 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: #000;
         }
 
         nav ul {
@@ -70,24 +67,24 @@
         }
 
         .hero {
-            min-height: 80vh;
+            min-height: 30vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
-            padding: 40px 20px;
+            padding: 10px 20px;
         }
 
         .hero-content h1 {
             font-size: 3.5rem;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             animation: fadeInUp 1s ease;
         }
 
         .hero-content p {
             font-size: 1.5rem;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             animation: fadeInUp 1s ease 0.2s backwards;
         }
 
@@ -126,12 +123,35 @@
             background-clip: text;
         }
 
+        .subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
         .about-content {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 40px;
             font-size: 1.1rem;
-            color: #666;
+            color: #999;
+        }
+
+        .about-photo {
+            width: 220px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            flex-shrink: 0;
+        }
+
+        .about-text {
+            flex: 1;
+            text-align: left;
         }
 
         .projects-grid {
@@ -194,6 +214,7 @@
             font-size: 0.9rem;
             color: #667eea;
         }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -219,10 +240,91 @@
             font-size: 1.3rem;
         }
 
+        /* Styles pour les barres de compétences */
+        .skills-section {
+            margin-bottom: 60px;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: #fff;
+            font-size: 1.1em;
+        }
+
+        .skill-level {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 12px;
+            background: #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+            transition: width 1.5s ease-in-out;
+            width: 0;
+        }
+
+        .soft-skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .soft-skill-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .soft-skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .soft-skill-name {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .stars {
+            color: #ffd700;
+            font-size: 1.2em;
+        }
+
+        .star-empty {
+            color: #ddd;
+        }
+
         .contact-content {
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
+            color: #999;
         }
 
         .contact-links {
@@ -232,6 +334,7 @@
             margin-top: 30px;
             flex-wrap: wrap;
         }
+
         .veille-links {
             display: flex;
             justify-content: center;
@@ -244,8 +347,11 @@
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
+            color: #999;
         }
-        .veille-link {
+
+        .veille-link,
+        .contact-link {
             display: flex;
             align-items: center;
             gap: 10px;
@@ -257,18 +363,7 @@
             transition: transform 0.3s;
         }
 
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: rgb(255, 255, 255);
-            text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s;
-        }
-
+        .veille-link:hover,
         .contact-link:hover {
             transform: translateY(-3px);
         }
@@ -305,10 +400,20 @@
 
             nav ul {
                 gap: 15px;
+                flex-wrap: wrap;
             }
 
             h2 {
                 font-size: 2rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                text-align: center;
             }
         }
     </style>
@@ -320,8 +425,10 @@
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
-                <li><a href="#projets et cas pratiques">Projets</a></li>
+                <li><a href="#projets">Projets</a></li>
                 <li><a href="#competences">Compétences</a></li>
+                <li><a href="#hard-soft-skills">Hard & Soft Skills</a></li>
+                <li><a href="#Veille">Veilles</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -330,8 +437,7 @@
     <div class="hero" id="accueil">
         <div class="hero-content">
             <h1>Bonjour, et bienvenue sur mon portfolio</h1>
-            <p>Ma passion pour la data est celle de la compréhension : comprendre le réel, l’anticiper et agir de manière plus intelligente.</p>
-            <p>Je conçois l’analyse de données comme un outil d’aide à la décision : clair, rigoureux et orienté résultats, au service de l’amélioration continue et de l’impact réel.</p>
+            
             <a href="#projets" class="btn">Découvrir mes projets</a>
         </div>
     </div>
@@ -340,8 +446,13 @@
         <section id="about">
             <h2>À propos de moi</h2>
             <div class="about-content">
-                <p>Lorsque je demande à Chat GPT de me décrire en 10 mots sur l'ensemble de nos conversationw, il me répond : </p>
-                <p style="margin-top: 20px;">Curieux, Méthodique, Réfléchi, Perséverant, Analytique, Organisé ,Passionné, Technophile, Créatif et Exigeant 😎.</p>
+                <img src="Photo.jpg" alt="Photo de Romain RAMAT" class="about-photo">
+                <div class="about-text">
+                    <p style="margin-top: 20px;">Ma passion pour la data est celle de la compréhension : comprendre le réel, l'anticiper et agir de manière plus intelligente.</p>
+                    <p style="margin-top: 20px;">Je conçois l'analyse de données comme un outil d'aide à la décision : clair, rigoureux et orienté résultats, au service de l'amélioration continue et de l'impact réel.</p>
+                    <p style="margin-top: 20px;">Lorsque je demande à Chat GPT de me décrire en 10 mots sur l'ensemble de nos conversations, il me répond :</p>
+                    <p style="margin-top: 20px;">Curieux, Méthodique, Réfléchi, Perséverant, Analytique, Organisé, Passionné, Technophile, Créatif et Exigeant 😎.</p>
+                </div>
             </div>
         </section>
 
@@ -354,8 +465,8 @@
                     <div class="project-tags">
                         <span class="tag-hardskills">Dashboard EXCEL</span>
                         <span class="tag-hardskills">Support PowerPoint</span>
-                        <span class="tag-softsills">Proposer Storytelling</span>
-                        <span class="tag-softsills">Interprétation de plusieurs Graphiques et des résultats</span>
+                        <span class="tag-softsills">Storytelling</span>
+                        <span class="tag-softsills">Interprétation graphiques</span>
                     </div>
                 </div>
 
@@ -366,11 +477,8 @@
                         <span class="tag-hardskills">SQL Lite Studio</span>
                         <span class="tag-hardskills">Power Architect</span>
                         <span class="tag-hardskills">Dictionnaire de données</span>
-                        <span class="tag-softsills">Expliquer clairement les résultats obtenus</span>
+                        <span class="tag-softsills">Expliquer les résultats</span>
                     </div>
-                 <a href="https://github.com/ton-username/ton-repo" target="_blank" rel="noopener noreferrer" class="project-link">
-            Voir sur GitHub →
-                </a>
                 </div>
 
                 <div class="project-card">
@@ -381,7 +489,7 @@
                         <span class="tag-hardskills">Pandas</span>
                         <span class="tag-hardskills">Matplotlib</span>
                         <span class="tag-hardskills">Seaborn</span>
-                        <span class="tag-softsills">Vulgarisation des résultats</span>
+                        <span class="tag-softsills">Vulgarisation</span>
                         <span class="tag-softsills">Curiosité</span>
                     </div>
                 </div>
@@ -390,45 +498,46 @@
                     <h3>📊 Data dans l'immobilier</h3>
                     <p>Modélisation des données en respectant les formes normales (1, 2 et 3NF).</p>
                     <div class="project-tags">
-                        <span class="tag-hardskills">Gestion d'une dataBase</span>
+                        <span class="tag-hardskills">Gestion Database</span>
                         <span class="tag-hardskills">Requêtes SQL</span>
-                        <span class="tag-softsills">Compréhension du besoin métier</span>
+                        <span class="tag-softsills">Besoin métier</span>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <h3>📈 Analyse des données Bottleneck</h3>
-                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
+                    <p>Description de votre projet. Démontrez votre expertise technique.</p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Database</span>
                         <span class="tag">Cloud</span>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <h3>🗺️ Projet 6</h3>
-                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
+                    <p>Description de votre projet. Démontrez votre expertise technique.</p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Database</span>
-                        <span class="tag">Cloud</span>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <h3>⚖️ Projet 7</h3>
-                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
+                    <p>Description de votre projet. Démontrez votre expertise technique.</p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Database</span>
-                        <span class="tag">Cloud</span>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <h3>🐓 Projet 8</h3>
-                    <p>Description de votre troisième projet. Démontrez votre expertise technique.</p>
+                    <p>Description de votre projet. Démontrez votre expertise technique.</p>
                     <div class="project-tags">
                         <span class="tag">Python</span>
                         <span class="tag">Database</span>
-                        <span class="tag">Cloud</span>
                     </div>
                 </div>
             </div>
@@ -438,27 +547,130 @@
             <h2>Mes Compétences à votre service</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <h3>Python</h3>
+                    <h3>Langages</h3>
+                    <p>Python, SQL, DAX, HTML</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Librairies</h3>
                     <p>Pandas, Numpy, Scikit Learn, Matplotlib, Seaborn, Scipy</p>
                 </div>
                 <div class="skill-item">
                     <h3>Outils</h3>
-                    <p>PowerBI, Knime; Python, Excel, SQL Lite, Power Architect,  Git et GitHub</p>
+                    <p>PowerBI, Knime, Python, Excel, SQL Lite, Power Architect, Git et GitHub</p>
                 </div>
                 <div class="skill-item">
-                    <h3>Base de données</h3>
-                    <p>SQL, MySQL, PostgreSQL</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Machine Learning</h3>
-                    <p>PCA, Clustering, Régression Linéaire et Régression Logisique</p>
+                    <h3>Méthodes</h3>
+                    <p>PCA, Clustering, Régression Linéaire et Logistique</p>
                 </div>
             </div>
         </section>
+
+        <section id="hard-soft-skills">
+            <h2>💻 Hard Skills</h2>
+            <p class="subtitle">Compétences techniques évaluées</p>
+            
+            <div class="skills-section">
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">Avancé (4/5)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">Avancé (4/5)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">Pandas</span>
+                        <span class="skill-level">Intermédiaire (3/5)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">Power BI</span>
+                        <span class="skill-level">Intermédiaire (3/5)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-level">Intermédiaire (3/5)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">Excel / VBA</span>
+                        <span class="skill-level">Expert (5/5)</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="100"></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>🤝 Soft Skills</h2>
+            <p class="subtitle">Compétences comportementales</p>
+            
+            <div class="soft-skills">
+                <div class="soft-skill-card">
+                    <div class="soft-skill-name">Travail d'équipe</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="soft-skill-card">
+                    <div class="soft-skill-name">Communication</div>
+                    <div class="stars">★★★★<span class="star-empty">★</span></div>
+                </div>
+
+                <div class="soft-skill-card">
+                    <div class="soft-skill-name">Résolution de problèmes</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="soft-skill-card">
+                    <div class="soft-skill-name">Adaptabilité</div>
+                    <div class="stars">★★★★<span class="star-empty">★</span></div>
+                </div>
+
+                <div class="soft-skill-card">
+                    <div class="soft-skill-name">Esprit d'analyse</div>
+                    <div class="stars">★★★★★</div>
+                </div>
+
+                <div class="soft-skill-card">
+                    <div class="soft-skill-name">Autonomie</div>
+                    <div class="stars">★★★★<span class="star-empty">★</span></div>
+                </div>
+            </div>
+        </section>
+
         <section id="Veille">
             <h2>Mes veilles</h2>
             <div class="Mes_veilles">
-                    <p>Mes références pour une veille efficace !</p>
+                <p>Mes références pour une veille efficace !</p>
                 <div class="veille-links">
                     <a href="https://feedly.com/i/my/me" class="veille-link" target="_blank">
                         <span>📱</span> feedly
@@ -469,6 +681,7 @@
                 </div>
             </div>
         </section>
+
         <section id="contact">
             <h2>Me Contacter</h2>
             <div class="contact-content">
@@ -491,5 +704,16 @@
             <p>&copy; 2025 Rom1du62. Tous droits réservés.</p>
         </footer>
     </div>
-</body>
-</html>
+
+    <script>
+        // Animation des barres de progression au chargement de la page
+        window.addEventListener('load', () => {
+            const progressBars = document.querySelectorAll('.skill-progress');
+            progressBars.forEach(bar => {
+                const level = bar.getAttribute('data-level');
+                setTimeout(() => {
+                    bar.style.width = level + '%';
+                }, 100);
+            });
+        });
+    </script>
