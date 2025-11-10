@@ -13,8 +13,8 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #0c0c0c 0%, #4d4b4e 100%);
-            color: #333;
+            background: linear-gradient(135deg, #ffffff 0%, #4d4b4e 100%);
+            color: #000000;
             line-height: 1.6;
         }
 
@@ -57,13 +57,13 @@
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #667eea;
+            color: #000000;
         }
 
         .hero {
@@ -72,7 +72,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: white;
+            color: rgb(0, 0, 0);
             padding: 10px 20px;
         }
 
@@ -92,7 +92,7 @@
             display: inline-block;
             padding: 15px 40px;
             background: white;
-            color: #667eea;
+            color: #0f0f0f;
             text-decoration: none;
             border-radius: 50px;
             font-weight: bold;
@@ -102,11 +102,11 @@
 
         .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 25px rgb(255, 255, 255);
         }
 
         section {
-            background: rgb(29, 28, 29);
+            background: rgb(255, 254, 255);
             margin: 40px 0;
             padding: 60px 20px;
             border-radius: 20px;
@@ -117,7 +117,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 50px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #212124 0%, #0d0a0f 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -125,7 +125,7 @@
 
         .subtitle {
             text-align: center;
-            color: #999;
+            color: #0f0f0f;
             margin-bottom: 40px;
             font-size: 1.1em;
         }
@@ -137,7 +137,7 @@
             align-items: center;
             gap: 40px;
             font-size: 1.1rem;
-            color: #999;
+            color: #0f0f0f;
         }
 
         .about-photo {
@@ -175,7 +175,7 @@
         }
 
         .project-card h3 {
-            color: #667eea;
+            color: #000000;
             margin-bottom: 15px;
             font-size: 1.5rem;
         }
@@ -225,8 +225,8 @@
         .skill-item {
             text-align: center;
             padding: 30px;
-            background: linear-gradient(135deg, #667eea 0%, #8d79a1 100%);
-            color: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: rgb(0, 0, 0);
             border-radius: 15px;
             transition: transform 0.3s;
         }
@@ -258,7 +258,7 @@
 
         .skill-name {
             font-weight: 600;
-            color: #fff;
+            color: #000000;
             font-size: 1.1em;
         }
 
@@ -279,7 +279,7 @@
 
         .skill-progress {
             height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(90deg, #828594 0%, #000000 100%);
             border-radius: 10px;
             transition: width 1.5s ease-in-out;
             width: 0;
@@ -306,7 +306,7 @@
 
         .soft-skill-name {
             font-weight: 600;
-            color: #333;
+            color: #0f0f0f;
             margin-bottom: 10px;
             font-size: 1.1em;
         }
@@ -324,7 +324,7 @@
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
-            color: #999;
+            color: #0f0f0f;
         }
 
         .contact-links {
@@ -347,7 +347,7 @@
             max-width: 600px;
             margin: 0 auto;
             text-align: center;
-            color: #999;
+            color: #0f0f0f;
         }
 
         .veille-link,
@@ -356,8 +356,8 @@
             align-items: center;
             gap: 10px;
             padding: 15px 30px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: rgb(0, 0, 0);
             text-decoration: none;
             border-radius: 50px;
             transition: transform 0.3s;
@@ -436,9 +436,9 @@
 
     <div class="hero" id="accueil">
         <div class="hero-content">
-            <h1>Bonjour, et bienvenue sur mon portfolio</h1>
-            
+            <h1>Portfolio Data Analyst Romain RAMAT</h1>
             <a href="#projets" class="btn">Découvrir mes projets</a>
+            <a href="#hard-soft-skills" class="btn">Mes compétences</a>
         </div>
     </div>
 
@@ -448,10 +448,11 @@
             <div class="about-content">
                 <img src="https://raw.githubusercontent.com/Rom1du62/rom1du62.github.io/refs/heads/main/photo.JPG" alt="Photo de Romain RAMAT" class="about-photo">
                 <div class="about-text">
-                    <p style="margin-top: 20px;">Je suis un Data Analyste passionné par la donnée, et son pouvoir de transformation</p>
-                    <p style="margin-top: 20px;">Je conçois l'analyse de données comme un outil d'aide à la décision : clair, rigoureux et orienté résultats, au service de l'amélioration continue et de l'impact réel.</p>
-                    <p style="margin-top: 20px;">Lorsque je demande à Chat GPT de me décrire en 10 mots sur l'ensemble de nos conversations, il me répond :</p>
-                    <p style="margin-top: 20px;">Curieux, Méthodique, Réfléchi, Perséverant, Analytique, Organisé, Passionné, Technophile, Créatif et Exigeant 😎.</p>
+                    <p style="margin-top: 20px;">Bienvenue sur mon portfolio, qui présente les projets et livrables que j’ai réalisés au cours de ma formation</p>
+                    <p style="margin-top: 20px;">Je suis Data Analyst, passionné par l’exploitation de la donnée et par son potentiel à transformer les organisations.</p>
+                    <p style="margin-top: 20px;">J’envisage l’analyse de données comme un véritable outil d’aide à la décision : clair, rigoureux et orienté résultats, au service de l’amélioration continue et de l’impact opérationnel.</p>
+                    <p style="margin-top: 20px;">Si je devais me décrire à partir de mes échanges et de ma pratique professionnelle :</p>
+                    <p style="margin-top: 20px;">Curieux, méthodique, réfléchi, persévérant, analytique, organisé, passionné, technophile, créatif et exigeant.</p>
                 </div>
             </div>
         </section>
@@ -592,7 +593,7 @@
 
                 <div class="skill">
                     <div class="skill-header">
-                        <span class="skill-name">Pandas</span>
+                        <span class="skill-name">Pandas/Numpy</span>
                         <span class="skill-level">Intermédiaire (3/5)</span>
                     </div>
                     <div class="skill-bar">
@@ -612,7 +613,7 @@
 
                 <div class="skill">
                     <div class="skill-header">
-                        <span class="skill-name">JavaScript</span>
+                        <span class="skill-name">Knime</span>
                         <span class="skill-level">Intermédiaire (3/5)</span>
                     </div>
                     <div class="skill-bar">
@@ -622,7 +623,7 @@
 
                 <div class="skill">
                     <div class="skill-header">
-                        <span class="skill-name">Excel / VBA</span>
+                        <span class="skill-name">Excel</span>
                         <span class="skill-level">Expert (5/5)</span>
                     </div>
                     <div class="skill-bar">
