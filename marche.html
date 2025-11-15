@@ -34,19 +34,6 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
-        .skills-container {
-            display: flex;
-            gap: 40px;
-        }
-
-        @media (max-width: 768px) {
-            /* ... tes règles existantes ... */
-            
-            .skills-container {
-                flex-direction: column;
-            }
-        }
-
         nav {
             display: flex;
             justify-content: space-between;
@@ -467,7 +454,7 @@
 
     <div class="hero" id="accueil">
         <div class="hero-content">
-            <h1>Data Analyst<br> Romain RAMAT</h1>
+            <h1>Projet<br> Machin1</h1>
             <a href="#projets" class="btn">Découvrir mes projets</a>
             <a href="#hard-soft-skills" class="btn">Mes compétences</a>
             <a href="#contact" class="btn">Me contacter</a>
@@ -488,6 +475,47 @@
                 </div>
             </div>
         </section>
+        
+        <section id="projet1">
+            <h2>À propos de moi</h2>
+            <div class="about-content">
+                    <h1>Analyse des ventes e-commerce</h1>
+    <p><strong>Objectif :</strong> Identifier les produits les plus rentables et comprendre les comportements d’achat.</p>
+
+    <h2>Contexte</h2>
+    <p> Jeu de données contenant 50 000 transactions issues d’un site e-commerce.  L’entreprise souhaite améliorer son panier moyen et cibler les produits à fort potentiel.</p>
+
+    <h2>Démarche</h2>
+    <ul>
+        <li>Nettoyage et structuration des données (Pandas).</li>
+        <li>Analyse exploratoire (corrélations, distributions, segmentation RFM).</li>
+        <li>Création d’indicateurs : CA par catégorie, marge, fréquence d’achat.</li>
+        <li>Visualisation dans Power BI pour support à la décision.</li>
+    </ul>
+
+    <h2>Outils utilisés</h2>
+    <p>Python (Pandas, Matplotlib), Power BI, SQL.</p>
+
+    <h2>Résultats</h2>
+    <ul>
+        <li>3 catégories représentent 62 % du chiffre d'affaires total.</li>
+        <li>Segmentation RFM → identification de clients "Premium" (10 % du total, 35 % du CA).</li>
+        <li>Recommandation de ciblage marketing → potentiel +12 % CA.</li>
+    </ul>
+
+    <h2>Exemples de visualisations</h2>
+    <div class="image-container">
+        <img src="image-dashboard-exemple.png" alt="Exemple de dashboard Power BI">
+        <p><em>Dashboard extrait (remplacer par ton image)</em></p>
+    </div>
+
+    <a class="btn-github" href="https://github.com/ton-repo/projet-ecommerce" target="_blank">
+    Voir les fichiers sur GitHub
+    </a>  
+                </div>
+            </div>
+        </section>
+
 
         <section id="projets">
             <h2>Mes Projets</h2>
@@ -499,7 +527,7 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>🛒 Analyse des données d'un site e-commerce</h3>
-                    <a href="https://rom1du62.github.io/Le_grand_Marche_analyse_e-commerce/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Le%20grand%20March%C3%A9%20analyse%20e-commerce" target="_blank" style="text-decoration: none; color: inherit;">
                         <p>Manipulation de données, élaboration de dashboard excel et interprétation des indicateurs.</p>
                         <div class="project-tags">
                             <span class="tag-hardskills">Manipulation des données EXCEL</span>
@@ -513,7 +541,7 @@
 
                 <div class="project-card">
                     <h3>🗄️ Base de données et requêtes SQL</h3>
-                    <a href="https://rom1du62.github.io/Base_de_donnees_et_requetes_SQL/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Base%20de%20donnees%20et%20requetes%20SQL" target="_blank" style="text-decoration: none; color: inherit;">
                         <p>Modélisation et interrogation d'une base de donnée en SQL</p>
                         <div class="project-tags">
                             <span class="tag-hardskills">SQL Lite Studio</span>
@@ -525,7 +553,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/Etude_sur_l'alimentation_dans_le_monde/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Etude%20sur%20l'alimentation%20dans%20le%20monde" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🥗 Etude sur l'alimentation dans le monde</h3>
                         <p>Manipulation de plusieurs fichiers csv et interprétation des données avec PANDAS</p>
                         <div class="project-tags">
@@ -540,7 +568,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/Projet_Data_Immo/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Projet%20Data%20Immo" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🏠 Data dans l'immobilier</h3>
                         <p>Modélisation des données en respectant les formes normales (1, 2 et 3NF).</p>
                         <div class="project-tags">
@@ -555,7 +583,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/Analyse_des_donnees_Bottleneck/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Analyse%20des%20donnees%20Bottleneck" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🍷 Analyse des données Bottleneck</h3>
                         <p>Description de votre projet. Démontrez votre expertise technique.</p>
                         <div class="project-tags">
@@ -572,7 +600,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/Dataviz_Sanitoral/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Dataviz%20Sanitoral" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>📊 Tableau de bord dynamique avec PowerBI</h3>
                         <p>Découverte de PowerBI, intégration des données, mise en forme, table de relation</p>
                         <div class="project-tags">
@@ -587,7 +615,7 @@
                 </div>
 
                 <div class="project-card">
-                        <a href="https://rom1du62.github.io/Diagnostic_egalite_Femme-Homme/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                        <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Diagnostic%20egalite%20Femme-Homme" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>⚖️ Egalité Hommes / Femmes</h3>
                         <p>Mise en place d'un workflow nocode avec Knime, de la reprise des données à la mise en forme.</p>
                         <div class="project-tags">
@@ -602,7 +630,7 @@
                 </div>    
 
                 <div class="project-card">
-                        <a href="https://rom1du62.github.io/Analyse_des_ventes_Librairie/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                        <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Analyse%20des%20ventes%20Librairie" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🗺️ Analyse des ventes librairie en ligne</h3>
                         <p>Analyse des données</p>
                         <div class="project-tags">
@@ -614,7 +642,7 @@
                 </div> 
 
                 <div class="project-card">
-                        <a href="https://rom1du62.github.io/Etude_insalubrite_dans_le_monde/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                        <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Etude%20insalubrite%20dans%20le%20monde" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🚱 Etude sur l'insalubrité de l'eau dans le monde</h3>
                         <p>Second projet avec PowerBI.</p>
                         <div class="project-tags">
@@ -626,7 +654,7 @@
                 </div>
 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/La_poule_qui_chante/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/La%20poule%20qui%20chante" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🐓 Etude de marché</h3>
                         <p>Description de votre projet. Démontrez votre expertise technique.</p>
                         <div class="project-tags">
@@ -639,7 +667,7 @@
                 </div>
                 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/Detection_de_faux_billets/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Detection%20de%20faux%20billets" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>💸 Detection de faux billets</h3>
                         <p>Description de votre projet. Démontrez votre expertise technique.</p>
                         <div class="project-tags">
@@ -651,7 +679,7 @@
                 </div>
                 
                 <div class="project-card">
-                    <a href="https://rom1du62.github.io/Realisation_portfolio/index.html" target="_blank" style="text-decoration: none; color: inherit;">
+                    <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/R%C3%A9alisation%20portfolio" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🧾 Création d'un portefolio</h3>
                         <p>Description de votre projet. Démontrez votre expertise technique.</p>
                         <div class="project-tags">
@@ -689,41 +717,39 @@
         </section>
 
         <section id="hard-soft-skills">
-            <div class="skills-container">
-                <div style="flex: 1;">
-                    <h2>Hard Skills</h2>
-                    <p class="subtitle">Compétences techniques évaluées</p>
+            <h2>Hard Skills</h2>
+            <p class="subtitle">Compétences techniques évaluées</p>
             
-                <div class="skills-section">
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-level">Avancé (4/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="80"></div>
-                        </div>
+            <div class="skills-section">
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">Python</span>
+                        <span class="skill-level">Avancé (4/5)</span>
                     </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                </div>
 
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">SQL</span>
-                            <span class="skill-level">Avancé (4/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="80"></div>
-                        </div>
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">SQL</span>
+                        <span class="skill-level">Avancé (4/5)</span>
                     </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="80"></div>
+                    </div>
+                </div>
 
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">Pandas/Numpy</span>
-                            <span class="skill-level">Intermédiaire (3/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="60"></div>
-                        </div>
+                <div class="skill">
+                    <div class="skill-header">
+                        <span class="skill-name">Pandas/Numpy</span>
+                        <span class="skill-level">Intermédiaire (3/5)</span>
                     </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-level="60"></div>
+                    </div>
+                </div>
 
                 <div class="skill">
                     <div class="skill-header">
@@ -755,10 +781,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-                
-                <div style="flex: 1;">
-                    <h2>Soft Skills</h2>
+
+            <h2>Soft Skills</h2>
             <p class="subtitle">Compétences comportementales</p>
             
             <div class="soft-skills">
@@ -795,10 +819,8 @@
                     <p>Partager son savoir avec les autres</p>
                     <div class="stars">★★★★★</div>
                 </div>
+
             </div>
-                </div> 
-            </div>
-         
         </section>
 
         <section id="Veille">
@@ -812,7 +834,8 @@
                     <a href="https://wakelet.com/workspace/DbkeZgnXn3_-HontLbtaS/collections" class="veille-link" target="_blank">
                         <span>✉️</span> wakelet
                     </a>
-             </div>
+                </div>
+            </div>
         </section>
 
         <section id="contact">
@@ -832,9 +855,8 @@
                 </div>
             </div>
         </section>
-    </div>
+
         <footer>
             <p>&copy; 2025 Romain RAMAT. Tous droits réservés.</p>
         </footer>
     </div>
-
