@@ -34,6 +34,19 @@
             box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
+        .skills-container {
+            display: flex;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            /* ... tes règles existantes ... */
+            
+            .skills-container {
+                flex-direction: column;
+            }
+        }
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -676,39 +689,41 @@
         </section>
 
         <section id="hard-soft-skills">
-            <h2>Hard Skills</h2>
-            <p class="subtitle">Compétences techniques évaluées</p>
+            <div class="skills-container">
+                <div style="flex: 1;">
+                    <h2>Hard Skills</h2>
+                    <p class="subtitle">Compétences techniques évaluées</p>
             
-            <div class="skills-section">
-                <div class="skill">
-                    <div class="skill-header">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">Avancé (4/5)</span>
+                <div class="skills-section">
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-level">Avancé (4/5)</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="80"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="80"></div>
-                    </div>
-                </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <span class="skill-name">SQL</span>
-                        <span class="skill-level">Avancé (4/5)</span>
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span class="skill-name">SQL</span>
+                            <span class="skill-level">Avancé (4/5)</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="80"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="80"></div>
-                    </div>
-                </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <span class="skill-name">Pandas/Numpy</span>
-                        <span class="skill-level">Intermédiaire (3/5)</span>
+                    <div class="skill">
+                        <div class="skill-header">
+                            <span class="skill-name">Pandas/Numpy</span>
+                            <span class="skill-level">Intermédiaire (3/5)</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-level="60"></div>
+                        </div>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="60"></div>
-                    </div>
-                </div>
 
                 <div class="skill">
                     <div class="skill-header">
@@ -740,8 +755,10 @@
                     </div>
                 </div>
             </div>
-
-            <h2>Soft Skills</h2>
+        </div>
+                
+                <div style="flex: 1;">
+                    <h2>Soft Skills</h2>
             <p class="subtitle">Compétences comportementales</p>
             
             <div class="soft-skills">
@@ -778,8 +795,10 @@
                     <p>Partager son savoir avec les autres</p>
                     <div class="stars">★★★★★</div>
                 </div>
-
             </div>
+                </div> 
+            </div>
+         
         </section>
 
         <section id="Veille">
@@ -793,8 +812,7 @@
                     <a href="https://wakelet.com/workspace/DbkeZgnXn3_-HontLbtaS/collections" class="veille-link" target="_blank">
                         <span>✉️</span> wakelet
                     </a>
-                </div>
-            </div>
+             </div>
         </section>
 
         <section id="contact">
@@ -814,7 +832,7 @@
                 </div>
             </div>
         </section>
-
+    </div>
         <footer>
             <p>&copy; 2025 Romain RAMAT. Tous droits réservés.</p>
         </footer>
