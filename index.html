@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Portfolio personnel">
     <title>Portfolio - Romain RAMAT</title>
     <style>
         * {
@@ -87,7 +87,13 @@
             margin-bottom: 10px;
             animation: fadeInUp 1s ease 0.2s backwards;
         }
-
+        
+        .hero-description p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            text-align: center;
+            animation: fadeInUp 1s ease 0.2s backwards;
+        }
         .btn {
             display: inline-block;
             padding: 15px 40px;
@@ -417,11 +423,23 @@
             }
         }
     </style>
+        <script>
+        // Animation des barres de progression au chargement de la page
+        window.addEventListener('load', () => {
+            const progressBars = document.querySelectorAll('.skill-progress');
+            progressBars.forEach(bar => {
+                const level = bar.getAttribute('data-level');
+                setTimeout(() => {
+                    bar.style.width = level + '%';
+                }, 100);
+            });
+        });
+    </script>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">Rom1du62</div>
+            <div class="logo">Mon Portfolio</div>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#about">À propos</a></li>
@@ -436,9 +454,10 @@
 
     <div class="hero" id="accueil">
         <div class="hero-content">
-            <h1>Portfolio Data Analyst Romain RAMAT</h1>
+            <h1>Data Analyst<br> Romain RAMAT</h1>
             <a href="#projets" class="btn">Découvrir mes projets</a>
             <a href="#hard-soft-skills" class="btn">Mes compétences</a>
+            <a href="#contact" class="btn">Me contacter</a>
         </div>
     </div>
 
@@ -459,6 +478,11 @@
 
         <section id="projets">
             <h2>Mes Projets</h2>
+            <div class="hero-description">
+            <p style="margin-top: 10px;">Vous trouverez ci-dessous mes projets d'études.</p> 
+            <p style="margin-top: 10px;">En marron les hardskills que j'ai pu apprendre et mettre en pratique, et sur fond jaune les softskills que j'ai pu développer durant le projet</p>
+            <p style="margin-top: 10px;">Je vous invite à cliquer sur un projet pour le découvrir en détail, les livrables fournis dans le cadre des mes études ainsi que l'explication des compétences acquises</p>
+            </div>
             <div class="projects-grid">
                 <div class="project-card">
                     <h3>🛒 Analyse des données d'un site e-commerce</h3>
@@ -466,7 +490,7 @@
                         <p>Manipulation de données, élaboration de dashboard excel et interprétation des indicateurs.</p>
                         <div class="project-tags">
                             <span class="tag-hardskills">Manipulation des données EXCEL</span>
-                            <span class="tag-hardskills">Mise en place de graphiquet</span>
+                            <span class="tag-hardskills">Mise en place de graphique</span>
                             <span class="tag-softsills">Storytelling</span>
                             <span class="tag-softsills">Respect des pratiques d'accessibilité</span>
                             <span class="tag-softsills">Interprétation des données</span>
@@ -537,7 +561,7 @@
                 <div class="project-card">
                     <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Dataviz%20Sanitoral" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>📊 Tableau de bord dynamique avec PowerBI</h3>
-                        <p>Description de votre projet. Démontrez votre expertise technique.</p>
+                        <p>Découverte de PowerBI, intégration des données, mise en forme, table de relation</p>
                         <div class="project-tags">
                             <span class="tag-hardskills">POWER BI</span>
                             <span class="tag-hardskills">Langage DAX</span>
@@ -552,7 +576,7 @@
                 <div class="project-card">
                         <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Diagnostic%20egalite%20Femme-Homme" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>⚖️ Egalité Hommes / Femmes</h3>
-                        <p>Mise en place d'un workflow nocode avec Knime.</p>
+                        <p>Mise en place d'un workflow nocode avec Knime, de la reprise des données à la mise en forme.</p>
                         <div class="project-tags">
                             <span class="tag-hardskills">KNIME</span>
                             <span class="tag-hardskills">RGPD</span>
@@ -579,10 +603,11 @@
                 <div class="project-card">
                         <a href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Etude%20insalubrite%20dans%20le%20monde" target="_blank" style="text-decoration: none; color: inherit;">
                         <h3>🚱 Etude sur l'insalubrité de l'eau dans le monde</h3>
-                        <p>Description de votre projet. Démontrez votre expertise technique.</p>
+                        <p>Second projet avec PowerBI.</p>
                         <div class="project-tags">
-                            <span class="tag-hardskills">Python</span>
-                            <span class="tag-softsills">Database</span>
+                            <span class="tag-hardskills">PowerBI</span>
+                            <span class="tag-hardskills">DAX</span>
+                            <span class="tag-softsills">Vulgarisation</span>
                         </div>
                     </a>
                 </div>
@@ -594,6 +619,7 @@
                         <div class="project-tags">
                             <span class="tag-hardskills">Python</span>
                             <span class="tag-hardskills">Modèle Machine Learning</span>
+                            <span class="tag-hardskills">Modèle d'ACP</span>
                             <span class="tag-softsills">Database</span>
                         </div>
                     </a>
@@ -777,32 +803,20 @@
                 <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute opportunité de collaboration !</p>
                 <div class="contact-links">
                     <a href="https://github.com/Rom1du62" class="contact-link" target="_blank">
-                        <span>📱</span> GitHub
+                        <span>🐙</span> GitHub
                     </a>
                     <a href="mailto:ramatromain@yahoo.fr" class="contact-link">
-                        <span>✉️</span> Email
+                        <span>📧</span> Email
                     </a>
                     <a href="https://www.linkedin.com/in/romain-ramat-470aba26/" class="contact-link" target="_blank">
-                        <span>💼</span> LinkedIn
+                        <span>🌐</span> LinkedIn                
                     </a>
                 </div>
             </div>
         </section>
 
         <footer>
-            <p>&copy; 2025 Rom1du62. Tous droits réservés.</p>
+            <p>&copy; 2025 Romain RAMAT. Tous droits réservés.</p>
         </footer>
     </div>
 
-    <script>
-        // Animation des barres de progression au chargement de la page
-        window.addEventListener('load', () => {
-            const progressBars = document.querySelectorAll('.skill-progress');
-            progressBars.forEach(bar => {
-                const level = bar.getAttribute('data-level');
-                setTimeout(() => {
-                    bar.style.width = level + '%';
-                }, 100);
-            });
-        });
-    </script>
