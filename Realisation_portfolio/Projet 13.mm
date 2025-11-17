@@ -5,7 +5,7 @@
 </bookmarks>
 <node TEXT="Demandes du&#xa;client&#xa;Aéroworld et&#xa;démonstration&#xa;de la&#xa;compétence&#xa;par un livrable" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1761574221047" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="1.3310001">
+<hook NAME="MapStyle" zoom="0.62092125">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" auto_compact_layout="true" show_tags="UNDER_NODES" associatedTemplateLocation="template:/standard-1.6.mm" show_note_icons="true" fit_to_viewport="false" show_icons="BESIDE_NODES" showTagCategories="false"/>
     <tags category_separator="::"/>
 
@@ -343,10 +343,10 @@
 </node>
 <node TEXT="Livrables prioritaires" ID="ID_526103016" CREATED="1760968178885" MODIFIED="1760971055058">
 <node TEXT="Rapport d&apos;analyse des besoins métiers" ID="ID_184063749" CREATED="1760971049595" MODIFIED="1760971074792">
-<node TEXT="Lien vers doc" ID="ID_1495640278" CREATED="1760983297876" MODIFIED="1761573578626" LINK="Livrables/Besoins_metiers.docx"/>
+<node TEXT="Lien vers doc" ID="ID_1495640278" CREATED="1760983297876" MODIFIED="1763383306499" LINK="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf"/>
 </node>
 <node TEXT="Cahier des charges" ID="ID_43261023" CREATED="1760983306633" MODIFIED="1760983318812">
-<node TEXT="Lien vers cahier" ID="ID_292635173" CREATED="1760983322836" MODIFIED="1761574108703" LINK="Livrables/cahier_des_charges_fonctionnel.pptx"/>
+<node TEXT="Lien vers cahier" ID="ID_292635173" CREATED="1760983322836" MODIFIED="1763383562358" LINK="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf"/>
 </node>
 <node TEXT="Gestion du&#xa;projet portfolio" ID="ID_748768607" CREATED="1760983365342" MODIFIED="1760983368267">
 <node TEXT="Diagramme de Gantt pour&#xa;organiser/ planifier ce&#xa;projet portfolio" ID="ID_1554397849" CREATED="1760983370136" MODIFIED="1760983379312">
@@ -356,12 +356,12 @@
 </node>
 <node TEXT="Session de formation" ID="ID_1558275396" CREATED="1761574490977" MODIFIED="1761574502648">
 <node TEXT="Formation sur l&apos;outil Power BI" ID="ID_1712569520" CREATED="1761574507116" MODIFIED="1761574517674">
-<node TEXT="Présentation d&apos;un loom" ID="ID_241971172" CREATED="1761574522673" MODIFIED="1761574534922"/>
+<node TEXT="Présentation d&apos;un loom" ID="ID_241971172" CREATED="1761574522673" MODIFIED="1763383540379" LINK="https://youtu.be/KxSDSDTloOE"/>
 </node>
 </node>
 <node TEXT="Procédure&#xa;et documentation" ID="ID_1951842976" CREATED="1760983483416" MODIFIED="1760983499492">
 <node TEXT=" PDF : Procédure de&#xa;création d&apos;un&#xa;&quot;magnifique&quot; graphique&#xa;d&apos;analyse data" ID="ID_1252994274" CREATED="1760983501669" MODIFIED="1760983511199">
-<node TEXT="Lien vers la procédure" ID="ID_17790965" CREATED="1760983528748" MODIFIED="1761518643589" LINK="procédure/Guide%20incomplet%20de%20création%20de%20graphiques%20avec%20Tableau%20Software.docx"/>
+<node TEXT="Lien vers la procédure" ID="ID_17790965" CREATED="1760983528748" MODIFIED="1763383745038" LINK="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20création%20de%20graphiques%20avec%20PowerBI.pdf"/>
 </node>
 </node>
 </node>
