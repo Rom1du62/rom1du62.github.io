@@ -5,7 +5,7 @@
 </bookmarks>
 <node TEXT="Demandes du&#xa;client&#xa;Aéroworld et&#xa;démonstration&#xa;de la&#xa;compétence&#xa;par un livrable" FOLDED="false" ID="ID_696401721" CREATED="1610381621824" MODIFIED="1761574221047" STYLE="oval">
 <font SIZE="18"/>
-<hook NAME="MapStyle" zoom="0.62092125">
+<hook NAME="MapStyle" zoom="0.513158">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" show_icon_for_attributes="true" auto_compact_layout="true" show_tags="UNDER_NODES" associatedTemplateLocation="template:/standard-1.6.mm" show_note_icons="true" fit_to_viewport="false" show_icons="BESIDE_NODES" showTagCategories="false"/>
     <tags category_separator="::"/>
 
@@ -330,38 +330,38 @@
 </node>
 <node TEXT="Demandes du client" POSITION="top_or_left" ID="ID_1443464049" CREATED="1760968144406" MODIFIED="1760968152125">
 <edge COLOR="#00ff00"/>
-<node TEXT="Tableau de bord" ID="ID_1154473206" CREATED="1760968159127" MODIFIED="1760968174667">
+<node TEXT="Tableau de bord" ID="ID_1154473206" CREATED="1760968159127" MODIFIED="1763400720915" HGAP_QUANTITY="29 pt" VSHIFT_QUANTITY="-63 pt">
 <node TEXT="Veille métier" ID="ID_1704098727" CREATED="1760970990313" MODIFIED="1760970995759">
 <node TEXT="Test de méthodes / outils" ID="ID_420285525" CREATED="1760971009159" MODIFIED="1761574415951">
 <node TEXT="https://feedly.com" ID="ID_1922655064" CREATED="1760983237853" MODIFIED="1761518572694" LINK="https://feedly.com"/>
 <node TEXT="https://github.com/Rom1du62" ID="ID_1141089205" CREATED="1761571574167" MODIFIED="1761571593302" LINK="https://github.com/Rom1du62"/>
-<node TEXT="https://wakelet.com/" ID="ID_1740100266" CREATED="1761496911087" MODIFIED="1761518583449" LINK="https://wakelet.com/"/>
+<node TEXT="https://wakelet.com/wake/tdfGL6eTwYiMYLiLbPJp8" ID="ID_1740100266" CREATED="1761496911087" MODIFIED="1763400360172" LINK="https://wakelet.com/"/>
 <node TEXT="https://www.linkedin.com/learning/" ID="ID_237079842" CREATED="1761571488922" MODIFIED="1761571522766" LINK="https://www.linkedin.com/learning/"/>
 <node TEXT="https://www.linkedin.com/feed/" ID="ID_464120425" CREATED="1761571549311" MODIFIED="1761571660270" LINK="https://www.linkedin.com/feed/"/>
 </node>
 </node>
 </node>
-<node TEXT="Livrables prioritaires" ID="ID_526103016" CREATED="1760968178885" MODIFIED="1760971055058">
+<node TEXT="Livrables prioritaires" ID="ID_526103016" CREATED="1760968178885" MODIFIED="1763400862310" HGAP_QUANTITY="24.5 pt">
 <node TEXT="Rapport d&apos;analyse des besoins métiers" ID="ID_184063749" CREATED="1760971049595" MODIFIED="1760971074792">
-<node TEXT="Lien vers doc" ID="ID_1495640278" CREATED="1760983297876" MODIFIED="1763383306499" LINK="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf"/>
+<node TEXT="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf" ID="ID_1495640278" CREATED="1760983297876" MODIFIED="1763400726309" LINK="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf" HGAP_QUANTITY="25.25 pt" VSHIFT_QUANTITY="-27.75 pt"/>
 </node>
-<node TEXT="Cahier des charges" ID="ID_43261023" CREATED="1760983306633" MODIFIED="1760983318812">
-<node TEXT="Lien vers cahier" ID="ID_292635173" CREATED="1760983322836" MODIFIED="1763383562358" LINK="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf"/>
+<node TEXT="Cahier des charges" ID="ID_43261023" CREATED="1760983306633" MODIFIED="1763400731874" HGAP_QUANTITY="59.75 pt" VSHIFT_QUANTITY="-42 pt">
+<node TEXT="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20cr%C3%A9ation%20de%20graphiques%20avec%20PowerBI.pdf" ID="ID_292635173" CREATED="1760983322836" MODIFIED="1763400733677" LINK="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf" HGAP_QUANTITY="66.5 pt" VSHIFT_QUANTITY="-28.5 pt"/>
 </node>
 <node TEXT="Gestion du&#xa;projet portfolio" ID="ID_748768607" CREATED="1760983365342" MODIFIED="1760983368267">
-<node TEXT="Diagramme de Gantt pour&#xa;organiser/ planifier ce&#xa;projet portfolio" ID="ID_1554397849" CREATED="1760983370136" MODIFIED="1760983379312">
-<node TEXT="Gantt sur PowerBI" ID="ID_1578486047" CREATED="1760983382036" MODIFIED="1761583817292" LINK="Livrables/Diagramme%20Gantt.pbix"/>
+<node TEXT="Diagramme de Gantt pour&#xa;organiser/ planifier ce&#xa;projet portfolio" ID="ID_1554397849" CREATED="1760983370136" MODIFIED="1763400739400" HGAP_QUANTITY="66.5 pt" VSHIFT_QUANTITY="-32.25 pt">
+<node TEXT="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20cr%C3%A9ation%20de%20graphiques%20avec%20PowerBI.pdf" ID="ID_1578486047" CREATED="1760983382036" MODIFIED="1763400843416" LINK="Livrables/Diagramme%20Gantt.pbix" HGAP_QUANTITY="29.75 pt" VSHIFT_QUANTITY="-4.5 pt"/>
 </node>
 </node>
 </node>
-<node TEXT="Session de formation" ID="ID_1558275396" CREATED="1761574490977" MODIFIED="1761574502648">
-<node TEXT="Formation sur l&apos;outil Power BI" ID="ID_1712569520" CREATED="1761574507116" MODIFIED="1761574517674">
-<node TEXT="Présentation d&apos;un loom" ID="ID_241971172" CREATED="1761574522673" MODIFIED="1763383540379" LINK="https://youtu.be/KxSDSDTloOE"/>
+<node TEXT="Session de formation" ID="ID_1558275396" CREATED="1761574490977" MODIFIED="1763400857882" HGAP_QUANTITY="49.25 pt" VSHIFT_QUANTITY="-30 pt">
+<node TEXT="Formation sur l&apos;outil Power BI" ID="ID_1712569520" CREATED="1761574507116" MODIFIED="1763400758412" HGAP_QUANTITY="81.5 pt" VSHIFT_QUANTITY="17.25 pt">
+<node TEXT="https://www.youtube.com/watch?v=KxSDSDTloOE&amp;feature=youtu.be" ID="ID_241971172" CREATED="1761574522673" MODIFIED="1763400781925" LINK="https://youtu.be/KxSDSDTloOE" HGAP_QUANTITY="27.5 pt" VSHIFT_QUANTITY="-12.75 pt"/>
 </node>
 </node>
-<node TEXT="Procédure&#xa;et documentation" ID="ID_1951842976" CREATED="1760983483416" MODIFIED="1760983499492">
-<node TEXT=" PDF : Procédure de&#xa;création d&apos;un&#xa;&quot;magnifique&quot; graphique&#xa;d&apos;analyse data" ID="ID_1252994274" CREATED="1760983501669" MODIFIED="1760983511199">
-<node TEXT="Lien vers la procédure" ID="ID_17790965" CREATED="1760983528748" MODIFIED="1763383745038" LINK="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20création%20de%20graphiques%20avec%20PowerBI.pdf"/>
+<node TEXT="Procédure&#xa;et documentation" ID="ID_1951842976" CREATED="1760983483416" MODIFIED="1763416043408" HGAP_QUANTITY="28.25 pt" VSHIFT_QUANTITY="28.5 pt">
+<node TEXT=" PDF : Procédure de&#xa;création d&apos;un&#xa;&quot;magnifique&quot; graphique&#xa;d&apos;analyse data" ID="ID_1252994274" CREATED="1760983501669" MODIFIED="1763400868139" HGAP_QUANTITY="59 pt" VSHIFT_QUANTITY="21.75 pt">
+<node TEXT="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20cr%C3%A9ation%20de%20graphiques%20avec%20PowerBI.pdf" ID="ID_17790965" CREATED="1760983528748" MODIFIED="1763400836222" LINK="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20création%20de%20graphiques%20avec%20PowerBI.pdf" HGAP_QUANTITY="73.25 pt" VSHIFT_QUANTITY="23.25 pt"/>
 </node>
 </node>
 </node>
