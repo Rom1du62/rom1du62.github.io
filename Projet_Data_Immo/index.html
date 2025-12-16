@@ -2,50 +2,158 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Analyse des données d'un site de e-commerce – Projet 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisation d'un portfolio – Projet 13</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body { 
             font-family: Arial, sans-serif; 
             max-width: 900px; 
-            margin: 40px auto; 
+            margin: 0 auto; 
+            padding: 20px;
             line-height: 1.6; 
         }
+        
         h1 {
-             font-size: 28px; 
-            }
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
         h2 { 
             margin-top: 40px; 
             font-size: 20px; 
             border-bottom: 1px solid #ddd; 
             padding-bottom: 5px; 
         }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        
         .image-container {
-             margin: 20px 0; text-align: center; 
-            }
+            margin: 20px 0;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
         img {
-             max-width: 100%; 
-             border: 1px solid #ddd; 
-             border-radius: 4px; 
-            }
+            max-width: 100%; 
+            height: auto;
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+        }
+        
+        a {
+            color: #0066cc;
+            word-wrap: break-word;
+        }
+        
         .btn-github { 
             display: inline-block; 
-            margin-top: 30px;
-            padding: 10px 18px; 
-            border: 1px solid #333; 
-            text-decoration: none; 
+            margin: 15px 10px 15px 0;
+            padding: 12px 20px; 
+            border: 1px solid #333;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-github:hover {
+            background-color: #e0e0e0;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Media queries pour le responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+                margin: 0;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+            
+            h3 {
+                font-size: 16px;
+            }
+            
+            .btn-github {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+                padding: 12px 15px;
+            }
+            
+            ul {
+                padding-left: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            h3 {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
 <header>
-<h1>Analyse des ventes e-commerce</h1>
-<p><strong>Objectif :</strong> Identifier les produits les plus rentables et comprendre les comportements d’achat.</p>
+<h1>Mise en place d'une base de données dans l'immobilier</h1>
+<p><strong>Objectif :</strong> Importer des données issues de la DVF dans une base de données et lancer des requêtes.</p>
 </header>
-<Main>
+<main>
 <h2>Contexte</h2>
 <p>
-Ce premier projet consiste à travailler sur un rapport mensuel des actions marketing. Il convient de mettre à jour des données sous excel, d'actualiser les graphiques.
-  Enfin, il convient de mettre en place un support de présentation avec 5 graphiques pertinant et proposer un axe stratégique
+Etablir un modèle conceptuel de données, l'importer dans SQLite, intégrer des données issues de la <a href="https://www.data.gouv.fr/datasets/demandes-de-valeurs-foncieres/">DVF</a> et établir des requêtes pour contrôler les résultats
 </p>
 
 <h2>Démarche</h2>
@@ -57,12 +165,13 @@ Ce premier projet consiste à travailler sur un rapport mensuel des actions mark
 </ul>
 
 <h2>Outils utilisés</h2>
-<p>Excel, PowerPoint.</p>
+<p>SQLite, PowerArchitects, Excel.</p>
 
 <h2>Compétences acquises</h2>
 <ul>
-    <li>Choix des graphiques pertinants.</li>
-    <li>Element de Storytelling.</li>
+    <li>Mise en place d'un Modèle de données.</li>
+    <li>Apprentissage des formes normales.</li>
+    <li>Utiliser le language SQL.</li>
 </ul>
 
 <h2>Exemples de visualisations</h2>
@@ -73,16 +182,15 @@ Ce premier projet consiste à travailler sur un rapport mensuel des actions mark
     <p><em>Extrait du support de présentation</em></p>
 </div>
 
-<div><a class="btn-github" href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Projet_Data_Immo\" target="_blank">
-    Voir les livrables du projet sur GitHub
-</a>
-</div>
-<div>
-<a class="btn-github" href="https://rom1du62.github.io/">
-   Retour vers le portfolio
-</a>
-</div>
-</Main>
+    <div>
+        <a class="btn-github" href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Projet_Data_Immo\" target="_blank">
+            Voir les livrables du projet sur GitHub
+        </a>
+        <a class="btn-github" href="https://rom1du62.github.io/">
+            Retour vers le portfolio
+        </a>
+    </div>
+</main>
   <footer>
     <p>© 2025 Romain Ramat</p>
   </footer>
