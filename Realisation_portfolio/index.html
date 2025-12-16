@@ -2,110 +2,220 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Analyse des données d'un site de e-commerce – Projet 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réalisation d'un portfolio – Projet 13</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         body { 
             font-family: Arial, sans-serif; 
             max-width: 900px; 
-            margin: 40px auto; 
+            margin: 0 auto; 
+            padding: 20px;
             line-height: 1.6; 
         }
+        
         h1 {
-             font-size: 28px; 
-            }
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
         h2 { 
             margin-top: 40px; 
             font-size: 20px; 
             border-bottom: 1px solid #ddd; 
             padding-bottom: 5px; 
         }
+        
+        h3 {
+            font-size: 18px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        
         .image-container {
-             margin: 20px 0; text-align: center; 
-            }
+            margin: 20px 0;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
         img {
-             max-width: 100%; 
-             border: 1px solid #ddd; 
-             border-radius: 4px; 
-            }
+            max-width: 100%; 
+            height: auto;
+            border: 1px solid #ddd; 
+            border-radius: 4px; 
+        }
+        
+        a {
+            color: #0066cc;
+            word-wrap: break-word;
+        }
+        
         .btn-github { 
             display: inline-block; 
-            margin-top: 30px;
-            padding: 10px 18px; 
-            border: 1px solid #333; 
-            text-decoration: none; 
+            margin: 15px 10px 15px 0;
+            padding: 12px 20px; 
+            border: 1px solid #333;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #333;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s;
+        }
+        
+        .btn-github:hover {
+            background-color: #e0e0e0;
+        }
+        
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+        
+        /* Media queries pour le responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+                margin: 0;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            h2 {
+                font-size: 18px;
+                margin-top: 30px;
+            }
+            
+            h3 {
+                font-size: 16px;
+            }
+            
+            .btn-github {
+                display: block;
+                width: 100%;
+                text-align: center;
+                margin: 10px 0;
+                padding: 12px 15px;
+            }
+            
+            ul {
+                padding-left: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+            
+            h3 {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
 <header>
-<h1>Réalisation d'un portfolio</h1>
-<p><strong>Objectif :</strong> Mettre en ligne mon portfolio et répondre à une annonce.</p>
+    <h1>Réalisation d'un portfolio</h1>
+    <p><strong>Objectif :</strong> Mettre en ligne mon portfolio et répondre à une annonce.</p>
 </header>
-<Main>
-<h2>Contexte</h2>
-<p>
-Ce projet présente les livrables attendus pour une candidature chez Aeroworld. 
-</p>
 
-<h2>Démarche</h2>
-<ul>
-    <li>Création d'un Mindmapping structurant le projet</li>
-    <li>Mise en place du portfolio sous GitHub en HTML</li>
-    <li>Rédaction de l'analyse du besoin</li>
-    <li>Réalisation d'un cahier des charges</li>
-    <li>Mise en place d'un Gantt</li>
-    <li>Rédaction d'une procédure pour création graphique sous Power BI</li>
-    <li>Mise à disposition d'une video explicative pour l'utilisation PowerBI</li>
-</ul>
+<main>
+    <h2>Contexte</h2>
+    <p>
+        Ce projet présente les livrables attendus pour une candidature chez Aeroworld. 
+    </p>
 
-<h2>Outils utilisés</h2>
-<p>GIT et GITHUB, Visual Sudio code, freeplan (Mindmapping), LOOM(formation visuelle)</p>
+    <h2>Démarche</h2>
+    <ul>
+        <li>Création d'un Mindmapping structurant le projet</li>
+        <li>Mise en place du portfolio sous GitHub en HTML</li>
+        <li>Rédaction de l'analyse du besoin</li>
+        <li>Réalisation d'un cahier des charges</li>
+        <li>Mise en place d'un Gantt</li>
+        <li>Rédaction d'une procédure pour création graphique sous Power BI</li>
+        <li>Mise à disposition d'une vidéo explicative pour l'utilisation PowerBI</li>
+    </ul>
 
-<h2>Compétences acquises</h2>
-<ul>
-    <li>Commandes GIT</li>
-    <li>HTML5 et CSS.</li>
-    <li>Utilisation de loom.</li>
-    <li>Vulgarisation</li>
-    <li>Adaptabilité</li>
-</ul>
+    <h2>Outils utilisés</h2>
+    <p>GIT et GITHUB, Visual Studio Code, Freeplan (Mindmapping), LOOM (formation visuelle)</p>
 
-<h2>Les livrables</h2>
-<div class="image-container">
+    <h2>Compétences acquises</h2>
+    <ul>
+        <li>Commandes GIT</li>
+        <li>HTML5 et CSS</li>
+        <li>Utilisation de Loom</li>
+        <li>Vulgarisation</li>
+        <li>Adaptabilité</li>
+    </ul>
 
-    <h3>Video de formation à l'outil PowerBI</h3>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/KxSDSDTloOE?si=xvvkXCPrNZ96B62o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-    <h3>MindMapping avec les liens pour les livrables</h3>
-        <a href="https://rom1du62.github.io/Realisation_portfolio/Projet13.pdf" target="_blank">Carte de MindMapping.pdf</a>
-
-    <h3>Analyse du besoin métier</h3>
-        <a href="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf" target="_blank">Analyse du besoin client.pdf</a>
-
-    <h3>Procédure de création d'un graphique sous Power BI</h3>
-        <a href="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20création%20de%20graphiques%20avec%20PowerBI.pdf" target="_blank">Procédure pour la création d'un graphique sous Power BI.pdf</a>
-
-    <h3>Cahier des charges</h3>
-        <a href="https://rom1du62.github.io/Realisation_portfolio/Cahier%20des%20charges.pdf" target="_blank">Cahier des charges.pdf</a>
-
-    <h3>Diagramme de Gantt</h3>
-        <a href="https://rom1du62.github.io/Realisation_portfolio/Capture_Gantt.jpg" target="_blank">Diagramme de Gantt.jpg</a>
-
+    <h2>Les livrables</h2>
+    
+    <div class="image-container">
+        <h3>Vidéo de formation à l'outil PowerBI</h3>
+        <div class="video-wrapper">
+            <iframe src="https://www.youtube.com/embed/KxSDSDTloOE?si=xvvkXCPrNZ96B62o" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
 
-<div>
-    <a class="btn-github" href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Realisation_portfolio/" target="_blank">
-    Voir les livrables du projet sur GitHub
-    </a>
-</div>
-<div>
-    <a class="btn-github" href="https://rom1du62.github.io/">
-   Retour vers le portfolio
-    </a>
-</div>
-</Main>
-  <footer>
+        <h3>MindMapping avec les liens pour les livrables</h3>
+        <a href="https://rom1du62.github.io/Realisation_portfolio/Projet13.pdf" target="_blank">Carte de MindMapping.pdf</a>
+
+        <h3>Analyse du besoin métier</h3>
+        <a href="https://rom1du62.github.io/Realisation_portfolio/Analyse%20des%20Besoins%20m%C3%A9tiers.pdf" target="_blank">Analyse du besoin client.pdf</a>
+
+        <h3>Procédure de création d'un graphique sous Power BI</h3>
+        <a href="https://rom1du62.github.io/Realisation_portfolio/Guide%20complet%20de%20création%20de%20graphiques%20avec%20PowerBI.pdf" target="_blank">Procédure pour la création d'un graphique sous Power BI.pdf</a>
+
+        <h3>Cahier des charges</h3>
+        <a href="https://rom1du62.github.io/Realisation_portfolio/Cahier%20des%20charges.pdf" target="_blank">Cahier des charges.pdf</a>
+
+        <h3>Diagramme de Gantt</h3>
+        <a href="https://rom1du62.github.io/Realisation_portfolio/Capture_Gantt.jpg" target="_blank">Diagramme de Gantt.jpg</a>
+    </div>
+
+    <div>
+        <a class="btn-github" href="https://github.com/Rom1du62/rom1du62.github.io/tree/main/Realisation_portfolio/" target="_blank">
+            Voir les livrables du projet sur GitHub
+        </a>
+        <a class="btn-github" href="https://rom1du62.github.io/">
+            Retour vers le portfolio
+        </a>
+    </div>
+</main>
+
+<footer>
     <p>© 2025 Romain Ramat</p>
-  </footer>
+</footer>
 </body>
 </html>
