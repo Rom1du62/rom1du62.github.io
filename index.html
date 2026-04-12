@@ -1,878 +1,616 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="Description" content="Portfolio personnel">
-    <title>Portfolio - Romain RAMAT</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #4d4b4e 100%);
-            color: #000000;
-            line-height: 1.6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 20px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .skills-container {
-            display: flex;
-            gap: 40px;
-        }
-
-        @media (max-width: 768px) {
-            /* ... tes règles existantes ... */
-            
-            .skills-container {
-                flex-direction: column;
-            }
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: #000;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 30px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #0a0a0a;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: #524e4e;
-        }
-
-        .hero {
-            min-height: 30vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: rgb(0, 0, 0);
-            padding: 10px 20px;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            animation: fadeInUp 1s ease;
-        }
-
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            animation: fadeInUp 1s ease 0.2s backwards;
-        }
-        
-        .hero-description p {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-            text-align: center;
-            animation: fadeInUp 1s ease 0.2s backwards;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: white;
-            color: #0f0f0f;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 1s ease 0.4s backwards;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgb(255, 255, 255);
-        }
-
-        section {
-            background: rgb(255, 254, 255);
-            margin: 40px 0;
-            padding: 60px 20px;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            background: linear-gradient(135deg, #212124 0%, #0d0a0f 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .subtitle {
-            text-align: center;
-            color: #0f0f0f;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            font-size: 1.1rem;
-            color: #0f0f0f;
-        }
-
-        .about-photo {
-            width: 220px;
-            height: 280px;
-            object-fit: cover;
-            border-radius: 50%;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
-            flex-shrink: 0;
-        }
-
-        .about-text {
-            flex: 1;
-            text-align: left;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .project-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding: 30px;
-            border-radius: 15px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .project-card h3 {
-            color: #000000;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .project-card p {
-            color: #666;
-            margin-bottom: 20px;
-        }
-
-        .project-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .tag-hardskills {
-            background: rgb(138, 67, 35);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #ffffff;
-        }
-        
-        .tag-softsills {
-            background: rgb(231, 179, 82);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #000000;
-        }
-
-        .tag {
-            background: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: #667eea;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .skill-item {
-            text-align: center;
-            padding: 30px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: rgb(0, 0, 0);
-            border-radius: 15px;
-            transition: transform 0.3s;
-        }
-
-        .skill-item:hover {
-            transform: scale(1.05);
-        }
-
-        .skill-item h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-
-        /* Styles pour les barres de compétences */
-        .skills-section {
-            margin-bottom: 60px;
-        }
-
-        .skill {
-            margin-bottom: 25px;
-        }
-
-        .skill-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 8px;
-        }
-
-        .skill-name {
-            font-weight: 600;
-            color: #000000;
-            font-size: 1.1em;
-        }
-
-        .skill-level {
-            color: #000000;
-            font-weight: 600;
-            font-size: 0.9em;
-        }
-
-        .skill-bar {
-            width: 100%;
-            height: 12px;
-            background: #e0e0e0;
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .skill-progress {
-            height: 100%;
-            background: linear-gradient(90deg, #828594 0%, #000000 100%);
-            border-radius: 10px;
-            transition: width 1.5s ease-in-out;
-            width: 0;
-        }
-
-        .soft-skills {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .soft-skill-card {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 10px;
-            border-left: 4px solid #764ba2;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .soft-skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .soft-skill-name {
-            font-weight: 600;
-            color: #0f0f0f;
-            margin-bottom: 10px;
-            font-size: 1.1em;
-        }
-
-        .stars {
-            color: #ffd700;
-            font-size: 1.2em;
-        }
-
-        .star-empty {
-            color: #ddd;
-        }
-
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            color: #0f0f0f;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .veille-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 30px;
-            flex-wrap: wrap;
-        }
-
-        .Mes_veilles {
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-            color: #0f0f0f;
-        }
-
-        .veille-link,
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 15px 30px;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            color: rgb(0, 0, 0);
-            text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s;
-        }
-
-        .veille-link:hover,
-        .contact-link:hover {
-            transform: translateY(-3px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: white;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            margin-top: 40px;
-            border-radius: 20px;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-
-            nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .about-content {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .about-text {
-                text-align: center;
-            }
-        }
-    </style>
-        <script>
-        // Animation des barres de progression au chargement de la page
-        window.addEventListener('load', () => {
-            const progressBars = document.querySelectorAll('.skill-progress');
-            progressBars.forEach(bar => {
-                const level = bar.getAttribute('data-level');
-                setTimeout(() => {
-                    bar.style.width = level + '%';
-                }, 100);
-            });
-        });
-    </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Romain RAMAT – Data Analyst</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #0d0d0f;
+    --bg2: #141416;
+    --bg3: #1a1a1e;
+    --card: #1e1e24;
+    --border: rgba(255,255,255,0.07);
+    --border-hover: rgba(99,193,255,0.4);
+    --accent: #63c1ff;
+    --accent2: #a78bfa;
+    --text: #f0f0f2;
+    --muted: #8b8b99;
+    --tag-bg: rgba(99,193,255,0.1);
+    --tag-color: #63c1ff;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+ 
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(13,13,15,0.85); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2.5rem; height: 64px;
+  }
+  .nav-logo { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { background: var(--accent); color: #0d0d0f; padding: 0.5rem 1.25rem; border-radius: 999px; text-decoration: none; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s; }
+  .nav-cta:hover { opacity: 0.85; }
+ 
+  /* HERO */
+  .hero {
+    min-height: 100vh; display: flex; align-items: center;
+    padding: 8rem 2.5rem 4rem;
+    max-width: 1200px; margin: 0 auto;
+    gap: 4rem;
+  }
+  .hero-content { flex: 1; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--tag-bg); border: 1px solid rgba(99,193,255,0.2);
+    color: var(--accent); padding: 0.35rem 1rem; border-radius: 999px;
+    font-size: 0.8rem; font-weight: 500; margin-bottom: 1.5rem;
+  }
+  .hero-badge::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: block; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+  h1 { font-family: 'Syne', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 1.5rem; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .hero-sub { font-size: 1.1rem; color: var(--muted); max-width: 520px; margin-bottom: 2.5rem; line-height: 1.8; }
+  .hero-sub strong { color: var(--text); font-weight: 500; }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #0d0d0f; padding: 0.75rem 1.75rem; border-radius: 999px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: opacity 0.2s; }
+  .btn-primary:hover { opacity: 0.85; }
+  .btn-secondary { border: 1px solid var(--border-hover); color: var(--accent); padding: 0.75rem 1.75rem; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: background 0.2s; }
+  .btn-secondary:hover { background: rgba(99,193,255,0.07); }
+  .hero-photo {
+    width: 320px; height: 380px; flex-shrink: 0;
+    border-radius: 24px; overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--card);
+    position: relative;
+  }
+  .hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .hero-photo-placeholder {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 1rem; color: var(--muted); font-size: 0.875rem; text-align: center; padding: 2rem;
+  }
+  .hero-photo-placeholder svg { width: 64px; height: 64px; opacity: 0.3; }
+ 
+  /* STATS */
+  .stats-bar {
+    background: var(--bg2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    padding: 2rem 2.5rem;
+  }
+  .stats-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center; }
+  .stat-num { font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 0.85rem; color: var(--muted); margin-top: 0.25rem; }
+ 
+  /* SECTIONS */
+  section { padding: 6rem 2.5rem; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-header { margin-bottom: 3rem; }
+  .section-tag { font-size: 0.8rem; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem; }
+  h2 { font-family: 'Syne', sans-serif; font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; }
+  .section-desc { color: var(--muted); font-size: 1rem; max-width: 600px; margin-top: 0.75rem; }
+ 
+  /* ABOUT */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-text p { color: var(--muted); line-height: 1.9; margin-bottom: 1rem; }
+  .about-text p strong { color: var(--text); font-weight: 500; }
+  .traits { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+  .trait { background: var(--bg3); border: 1px solid var(--border); padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.8rem; color: var(--muted); }
+ 
+  /* PROJETS */
+  .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
+  .project-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s;
+    text-decoration: none; color: var(--text);
+    display: flex; flex-direction: column;
+  }
+  .project-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
+  .project-thumb {
+    height: 180px; background: linear-gradient(135deg, var(--bg3) 0%, #1a1a2e 100%);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 3rem; border-bottom: 1px solid var(--border);
+    position: relative; overflow: hidden;
+  }
+  .project-thumb::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(30,30,36,0.8));
+  }
+  .project-body { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; }
+  .project-body h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.5rem; line-height: 1.4; }
+  .project-body p { font-size: 0.85rem; color: var(--muted); flex: 1; margin-bottom: 1rem; line-height: 1.6; }
+  .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag { background: var(--tag-bg); color: var(--accent); padding: 0.2rem 0.65rem; border-radius: 999px; font-size: 0.75rem; font-weight: 500; }
+  .tag.soft { background: rgba(167,139,250,0.1); color: var(--accent2); }
+  .project-link { display: flex; align-items: center; gap: 0.4rem; font-size: 0.8rem; color: var(--accent); margin-top: 1rem; font-weight: 500; }
+ 
+  /* COMPETENCES */
+  .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+  .skill-group h3 { font-size: 1rem; font-weight: 600; margin-bottom: 1.5rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; }
+  .skill-item { margin-bottom: 1.25rem; }
+  .skill-header { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+  .skill-name { font-size: 0.9rem; font-weight: 500; }
+  .skill-level { font-size: 0.8rem; color: var(--muted); }
+  .skill-bar { height: 4px; background: var(--bg3); border-radius: 999px; overflow: hidden; }
+  .skill-fill { height: 100%; border-radius: 999px; background: var(--accent); transition: width 1s ease; }
+  .skill-fill.soft { background: var(--accent2); }
+ 
+  /* SOFT SKILLS CARDS */
+  .soft-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .soft-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+  .soft-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+  .soft-card h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.35rem; }
+  .soft-card p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+ 
+  /* VEILLE */
+  .veille-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .veille-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; text-decoration: none; color: var(--text); display: flex; align-items: center; gap: 1rem; transition: border-color 0.2s; }
+  .veille-card:hover { border-color: var(--border-hover); }
+  .veille-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--tag-bg); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; }
+  .veille-card h4 { font-size: 0.95rem; font-weight: 600; }
+  .veille-card p { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+ 
+  /* CONTACT */
+  .contact-section { background: var(--bg2); border-top: 1px solid var(--border); }
+  .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+  .contact-inner h2 { margin-bottom: 1rem; }
+  .contact-inner p { color: var(--muted); margin-bottom: 2.5rem; }
+  .contact-links { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+  .contact-link { display: flex; align-items: center; gap: 0.6rem; background: var(--card); border: 1px solid var(--border); padding: 0.75rem 1.5rem; border-radius: 12px; text-decoration: none; color: var(--text); font-size: 0.9rem; font-weight: 500; transition: border-color 0.2s, background 0.2s; }
+  .contact-link:hover { border-color: var(--border-hover); background: var(--bg3); }
+ 
+  /* FOOTER */
+  footer { text-align: center; padding: 2rem; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); }
+ 
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links { display: none; }
+    .hero { flex-direction: column-reverse; padding: 7rem 1.5rem 3rem; gap: 2rem; }
+    .hero-photo { width: 100%; height: 260px; }
+    section { padding: 4rem 1.5rem; }
+    .about-grid, .skills-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .projects-grid { grid-template-columns: 1fr; }
+    .veille-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Mon Portfolio</div>
-            <ul >
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projets">Projets</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#hard-soft-skills">Hard & Soft Skills</a></li>
-                <li><a href="#Veille">Veilles</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="hero" id="accueil">
-        <div class="hero-content">
-            <h1>Data Analyst<br> Romain RAMAT</h1>
-            <a href="#projets" class="btn">Découvrir mes projets</a>
-            <a href="#hard-soft-skills" class="btn">Mes compétences</a>
-            <a href="#contact" class="btn">Me contacter</a>
+ 
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#accueil">RR<span>.</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#veille">Veille</a></li>
+  </ul>
+  <a class="nav-cta" href="#contact">Me contacter</a>
+</nav>
+ 
+<!-- HERO -->
+<div class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="hero-badge">Disponible pour de nouvelles opportunités</div>
+    <h1>Je transforme<br/>la donnée en<br/><em>décisions éclairées</em></h1>
+    <p class="hero-sub">
+      Data Analyst passionné par le potentiel de la donnée à <strong>transformer les organisations</strong>. Rigoureux, curieux et orienté résultats — je construis des analyses claires au service de l'impact opérationnel.
+    </p>
+    <div class="hero-actions">
+      <a class="btn-primary" href="#projets">Découvrir mes projets</a>
+      <a class="btn-secondary" href="#contact">Me contacter</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="https://raw.githubusercontent.com/Rom1du62/rom1du62.github.io/refs/heads/main/photo.JPG" alt="Romain RAMAT" onerror="this.parentElement.innerHTML='<div class=hero-photo-placeholder><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><circle cx=\'12\' cy=\'8\' r=\'4\'/><path d=\'M4 20c0-4 3.6-7 8-7s8 3 8 7\'/></svg><span>Photo de profil</span></div>'" />
+  </div>
+</div>
+ 
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">13</div>
+      <div class="stat-label">Projets réalisés</div>
+    </div>
+    <div>
+      <div class="stat-num">6+</div>
+      <div class="stat-label">Outils maîtrisés</div>
+    </div>
+    <div>
+      <div class="stat-num">3</div>
+      <div class="stat-label">Langages de données</div>
+    </div>
+    <div>
+      <div class="stat-num">1</div>
+      <div class="stat-label">Passion : la donnée</div>
+    </div>
+  </div>
+</div>
+ 
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">À propos</div>
+      <h2>Qui suis-je ?</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Bienvenue sur mon portfolio. Je suis <strong>Romain RAMAT</strong>, Data Analyst formé à l'exploitation de la donnée sous toutes ses formes : extraction, modélisation, analyse statistique, visualisation et communication des résultats.</p>
+        <p>J'envisage l'analyse de données comme un <strong>véritable outil d'aide à la décision</strong> : clair, rigoureux et orienté résultats, au service de l'amélioration continue et de l'impact opérationnel.</p>
+        <p>Ce portfolio présente les projets et livrables réalisés au cours de ma formation, ainsi que mes projets personnels — chacun illustrant à la fois des compétences techniques et des savoir-être développés en situation réelle.</p>
+        <div class="traits">
+          <span class="trait">Curieux</span>
+          <span class="trait">Méthodique</span>
+          <span class="trait">Réfléchi</span>
+          <span class="trait">Persévérant</span>
+          <span class="trait">Analytique</span>
+          <span class="trait">Organisé</span>
+          <span class="trait">Passionné</span>
+          <span class="trait">Technophile</span>
+          <span class="trait">Créatif</span>
+          <span class="trait">Exigeant</span>
         </div>
-    </div>
-
-    <div class="container">
-        <section id="about">
-            <h2>À propos de moi</h2>
-            <div class="about-content">
-                <img src="https://raw.githubusercontent.com/Rom1du62/rom1du62.github.io/refs/heads/main/photo.JPG" alt="Photo de Romain RAMAT" class="about-photo">
-                <div class="about-text">
-                    <p style="margin-top: 20px;">Bienvenue sur mon portfolio, qui présente les projets et livrables que j’ai réalisés au cours de ma formation</p>
-                    <p style="margin-top: 20px;">Je suis Data Analyst, passionné par l’exploitation de la donnée et par son potentiel à transformer les organisations.</p>
-                    <p style="margin-top: 20px;">J’envisage l’analyse de données comme un véritable outil d’aide à la décision : clair, rigoureux et orienté résultats, au service de l’amélioration continue et de l’impact opérationnel.</p>
-                    <p style="margin-top: 20px;">Si je devais me décrire en 10 mots à partir de mes échanges et de ma pratique professionnelle, je dirais :</p>
-                    <p style="margin-top: 10px;"><strong>Curieux, méthodique, réfléchi, persévérant, analytique, organisé, passionné, technophile, créatif et exigeant.</strong></p>
-                </div>
+      </div>
+      <div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:1.75rem;">
+          <h3 style="font-size:0.8rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);margin-bottom:1.25rem;font-weight:600;">Stack technique</h3>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">
+            <div style="background:var(--bg3);border-radius:10px;padding:0.75rem;font-size:0.85rem;font-weight:500;">🐍 Python</div>
+            <div style="background:var(--bg3);border-radius:10px;padding:0.75rem;font-size:0.85rem;font-weight:500;">🗄️ SQL</div>
+            <div style="background:var(--bg3);border-radius:10px;padding:0.75rem;font-size:0.85rem;font-weight:500;">📊 Power BI</div>
+            <div style="background:var(--bg3);border-radius:10px;padding:0.75rem;font-size:0.85rem;font-weight:500;">⚙️ KNIME</div>
+            <div style="background:var(--bg3);border-radius:10px;padding:0.75rem;font-size:0.85rem;font-weight:500;">🔢 Excel</div>
+            <div style="background:var(--bg3);border-radius:10px;padding:0.75rem;font-size:0.85rem;font-weight:500;">🤖 Machine Learning</div>
+          </div>
+          <div style="border-top:1px solid var(--border);margin-top:1.25rem;padding-top:1.25rem;">
+            <div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.08em;font-weight:600;">Librairies</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0.4rem;font-size:0.8rem;">
+              <span style="background:var(--tag-bg);color:var(--accent);padding:0.25rem 0.65rem;border-radius:999px;">Pandas</span>
+              <span style="background:var(--tag-bg);color:var(--accent);padding:0.25rem 0.65rem;border-radius:999px;">NumPy</span>
+              <span style="background:var(--tag-bg);color:var(--accent);padding:0.25rem 0.65rem;border-radius:999px;">Scikit-learn</span>
+              <span style="background:var(--tag-bg);color:var(--accent);padding:0.25rem 0.65rem;border-radius:999px;">Matplotlib</span>
+              <span style="background:var(--tag-bg);color:var(--accent);padding:0.25rem 0.65rem;border-radius:999px;">Seaborn</span>
+              <span style="background:var(--tag-bg);color:var(--accent);padding:0.25rem 0.65rem;border-radius:999px;">SciPy</span>
             </div>
-        </section>
-
-        <section id="projets">
-            <h2>Mes Projets</h2>
-            <div class="hero-description">
-            <p style="margin-top: 10px;">Vous trouverez ci-dessous mes projets d'études, mais aussi mes projets personnels.</p> 
-            <p style="margin-top: 10px;">En marron les hard skills que j'ai pu apprendre et mettre en pratique, et sur fond jaune les soft skills que j'ai pu développer durant mes différents projets</p>
-            <p style="margin-top: 10px;">Je vous invite à cliquer sur un projet pour le découvrir en détail, les livrables fournis dans le cadre de mes études ainsi que l'explication des compétences acquises</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>🛒 Analyse des données d'un site e-commerce</h3>
-                    <a href="https://rom1du62.github.io/Le_grand_Marche_analyse_e-commerce/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <p>Manipulation de données, élaboration de dashboard excel et interprétation des indicateurs.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Manipulation des données EXCEL</span>
-                            <span class="tag-hardskills">Mise en place de graphique</span>
-                            <span class="tag-softsills">Storytelling</span>
-                            <span class="tag-softsills">Respect des pratiques d'accessibilité</span>
-                            <span class="tag-softsills">Interprétation des données</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <h3>🗄️ Conception et Mise en place d'une base de données et des requêtes SQL</h3>
-                    <a href="https://rom1du62.github.io/Base_de_donnees_et_requetes_SQL/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <p>Modélisation et interrogation d'une base de donnée en SQL</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">SQLite Studio</span>
-                            <span class="tag-hardskills">Power Architects</span>
-                            <span class="tag-hardskills">Dictionnaire de données</span>
-                            <span class="tag-hardskills">Elaboration de requêtes SQL</span>
-                            <span class="tag-softsills">Expliquer les résultats</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Etude_sur_l_alimentation_dans_le_monde/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🥗 Analyse de données réelles sur l'alimentation dans le monde</h3>
-                        <p>Manipulation de plusieurs fichiers csv et interprétation des données avec PANDAS</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Python</span>
-                            <span class="tag-hardskills">Pandas</span>
-                            <span class="tag-hardskills">Matplotlib</span>
-                            <span class="tag-hardskills">Seaborn</span>
-                            <span class="tag-softsills">Vulgarisation</span>
-                            <span class="tag-softsills">Curiosité</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Projet_Data_Immo/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🏠 Mise en place d'une base de données dans l'immobilier</h3>
-                        <p>Modélisation des données en respectant les formes normales (1, 2 et 3NF) et basé sur un fichier officiel de la DVF disponible sur le site gouv.fr.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Modélisation des bases de données</span>
-                            <span class="tag-hardskills">Requêtes SQL</span>
-                            <span class="tag-hardskills">Respect des formes Normales (1,2 et 3 NF)</span>
-                            <span class="tag-softsills">Rigueur</span>
-                            <span class="tag-softsills">Organisation</span>
-                            <span class="tag-softsills">Adaptabilité</span>
-                            <span class="tag-softsills">Créativité</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Analyse_des_donnees_Bottleneck/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🍷 Analyse des données d'une société de spiritueux</h3>
-                        <p>Analyse des données par l'approche statistiques.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Statistiques descriptives</span>
-                            <span class="tag-hardskills">Distribution des données</span>
-                            <span class="tag-hardskills">Etude des corrélations</span>
-                            <span class="tag-softsills">Curiosité et sens de l'exploration</span>
-                            <span class="tag-softsills">Compréhension du besoin métier</span>
-                            <span class="tag-softsills">Sens de la synthèse</span>
-                            <span class="tag-softsills">Vulgarisation</span>
-                            <span class="tag-softsills">Conseils et projection</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Dataviz_Sanitoral/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>📊 Création d'un tableau de bord dynamique de suivi Projet avec PowerBI</h3>
-                        <p>Découverte de PowerBI, intégration des données, mise en forme, table de relation</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">POWER BI</span>
-                            <span class="tag-hardskills">Langage DAX</span>
-                            <span class="tag-hardskills">Power Query</span>
-                            <span class="tag-softsills">Comprendre les enjeux métiers</span>
-                            <span class="tag-softsills">Comprendre les données</span>
-
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                        <a href="https://rom1du62.github.io/Diagnostic_egalite_Femme-Homme/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>⚖️ Egalité Hommes / Femmes dans une société</h3>
-                        <p>Mise en place d'un workflow nocode avec Knime, de la reprise des données à la mise en forme, en prenant en compte la règlementation RGPD.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">KNIME</span>
-                            <span class="tag-hardskills">RGPD</span>
-                            <span class="tag-hardskills">Egalité Homme Femme</span>
-                            <span class="tag-softsills">Capacité analyse et synthèse</span>
-                            <span class="tag-softsills">Rigueur</span>
-                            <span class="tag-softsills">Pédagogie</span>
-                        </div>
-                    </a>
-                </div>    
-
-                <div class="project-card">
-                        <a href="https://rom1du62.github.io/Analyse_des_ventes_Librairie/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🗺️ Analyse des ventes librairie en ligne</h3>
-                        <p>Analyse et manipulation des données statistiques pour vérifier des hypothèses de corrélation</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Statistiques descriptives</span>
-                            <span class="tag-hardskills">Utilisation des tests statistiques</span>
-                            <span class="tag-hardskills">Mise en oeuvre de la bibliothèque SCIPY.STATS</span>
-                            <span class="tag-softsills">Curiosité</span>
-                            <span class="tag-softsills">Rigueur</span>
-                        </div>
-                    </a>
-                </div> 
-
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Etude_insalubrite_dans_le_monde/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🚱 Mise en place d'un Dashboard pour identifier les niveaux d'insalubrité de l'eau dans le monde</h3>
-                        <p>Projet avec PowerBI pour la mise en place de dashboards interactifs permettant d'identifier rapidement les pays candidats à des interventions humanitaires.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">PowerBI</span>
-                            <span class="tag-hardskills">Power Query</span>
-                            <span class="tag-hardskills">DAX</span>
-                            <span class="tag-softsills">Vulgarisation</span>
-                            <span class="tag-softsills">Créativité</span>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/La_poule_qui_chante/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🐓 Etude de marché en utilisant le machine Learning pour réduire les dimensions et identifier des clusters cibles</h3>
-                        <p>Mise en place d'une analyse de marché en utilisation le modèle de l'Analyse en Composante principale et de clustering.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Python</span>
-                            <span class="tag-hardskills">Manipulation bibliothèque sklearn</span>
-                            <span class="tag-hardskills">Modèle d'ACP</span>
-                            <span class="tag-hardskills">Arbres de décision</span>
-                            <span class="tag-softsills">Ouverture d'esprit</span>
-                            <span class="tag-softsills">Autonomie</span>
-                            <span class="tag-softsills">Vulgarisation</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Detection_de_faux_billets/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>💸 Detection de faux billets via les systèmes d'apprentissages automatiques</h3>
-                        <p>Utilisation du Machine Learning via les régressions linéaires, logistiques et du clustering pour identifier les vrais des faux billets selon des caractéristiques connues.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Python</span>
-                            <span class="tag-hardskills">Manipulation bibliothèque sklearn</span>
-                            <span class="tag-hardskills">Régression linaire</span>
-                            <span class="tag-hardskills">Régression logistique</span>
-                            <span class="tag-hardskills">Clustering</span>
-                            <span class="tag-hardskills">Cross validation</span>
-                            <span class="tag-softsills">Curiosité</span>
-                            <span class="tag-softsills">Ouverture d'esprit</span>
-                            <span class="tag-softsills">Rigueur</span>
-                        </div>
-                    </a>
-                </div>
-                
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Realisation_portfolio/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>🧾 Création d'un portefolio</h3>
-                        <p>Réponse à une annonce et prouver mes compétences au poste proposé.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">HTML et CSS</span>
-                            <span class="tag-hardskills">GIT et GITHUB</span>
-                            <span class="tag-softsills">Pédagogie</span>
-                            <span class="tag-softsills">Vulgarisation</span>
-                            <span class="tag-softsills">Communication</span>
-                        </div>
-                    </a>
-                </div>
-                <div class="project-card">
-                    <a href="https://rom1du62.github.io/Challenge_data/index.html" target="_blank" style="text-decoration: none; color: inherit;">
-                        <h3>⚠️ Challenge Data sur la Fraude</h3>
-                        <p>Projet perso : Effectuer un challenge et obtenir un benchmark supérieur à 0.14.</p>
-                        <div class="project-tags">
-                            <span class="tag-hardskills">Python</span>
-                            <span class="tag-hardskills">LightGBM</span>
-                            <span class="tag-softsills">Pédagogie</span>
-                            <span class="tag-softsills">Curiosité</span>
-                            <span class="tag-softsills">Rigueur</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="competences">
-            <h2>Mes Compétences à votre service</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <h3>Langages</h3>
-                    <p>PYTHON, SQL, DAX, HTML</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Librairies</h3>
-                    <p>Pandas, Numpy, Scikit Learn, Matplotlib, Seaborn, Scipy</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Outils</h3>
-                    <p>PowerBI, Knime, Python, Excel, SQLite, Power Architect, Git et GitHub</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Apprentissage automatique et intelligence artificielle</h3>
-                    <p>PCA, Clustering, Régression Linéaire et Logistique</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="hard-soft-skills">
-            <div class="skills-container">
-                <div style="flex: 1;">
-                    <h2>Hard Skills</h2>
-                    <p class="subtitle">Compétences techniques évaluées</p>
-            
-                <div class="skills-section">
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">Python</span>
-                            <span class="skill-level">Expert (5/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="100"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">SQL</span>
-                            <span class="skill-level">Avancé (4/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="80"></div>
-                        </div>
-                    </div>
-
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">Pandas/Numpy</span>
-                            <span class="skill-level">Avancé (4/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="80"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill">
-                        <div class="skill-header">
-                            <span class="skill-name">Scikit Learn</span>
-                            <span class="skill-level">Avancé (4/5)</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-level="80"></div>
-                        </div>
-                    </div>
-                <div class="skill">
-                    <div class="skill-header">
-                        <span class="skill-name">Power BI</span>
-                        <span class="skill-level">Avancé (4/5)</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="80"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-header">
-                        <span class="skill-name">Knime</span>
-                        <span class="skill-level">Expert (5/5)</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="80"></div>
-                    </div>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-header">
-                        <span class="skill-name">Excel</span>
-                        <span class="skill-level">Expert (5/5)</span>
-                    </div>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-level="100"></div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-                
-                <div style="flex: 1;">
-                    <h2>Soft Skills</h2>
-            <p class="subtitle">Compétences comportementales</p>
-            
-            <div class="soft-skills">
-                <div class="soft-skill-card">
-                    <div class="soft-skill-name">Proposer un Storytelling</div>
-                    <p>Raconter en accrochant son auditoire</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-
-                <div class="soft-skill-card">
-                    <div class="soft-skill-name">Curieux</div>
-                    <p>Toujours approfondir ses analyses</p>
-                    <div class="stars">★★★★<span class="star-empty">★</span></div>
-                </div>
-
-                <div class="soft-skill-card">
-                    <div class="soft-skill-name">Adaptabilité</div>
-                    <div class="stars">★★★★<span class="star-empty">★</span></div>
-                </div>
-
-                <div class="soft-skill-card">
-                    <div class="soft-skill-name">Vulgarisation</div>
-                    <p>Ennoncé des éléments complexe de manière simple</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-
-                <div class="soft-skill-card">
-                    <div class="soft-skill-name">Empathique </div>
-                    <p>Compréhension des besoins et des enjeux business</p>
-                    <div class="stars">★★★★<span class="star-empty">★</span></div>
-                </div>
-                
-                <div class="soft-skill-card">
-                    <div class="soft-skill-name">Pédagogie</div>
-                    <p>Partager son savoir avec les autres</p>
-                    <div class="stars">★★★★★</div>
-                </div>
-            </div>
-                </div> 
-            </div>
-         
-        </section>
-
-        <section id="Veille">
-            <h2>Mes veilles</h2>
-            <div class="Mes_veilles">
-                <p>Mes références pour une veille efficace !</p>
-                <div class="veille-links">
-                    <a href="https://feedly.com/i/my/me" class="veille-link" target="_blank">
-                        <span>📱</span> feedly
-                    </a>
-                    <a href="https://wakelet.com/wake/tdfGL6eTwYiMYLiLbPJp8" class="veille-link" target="_blank">
-                        <span>✉️</span> wakelet
-                    </a>
-             </div>
-        </section>
-
-        <section id="contact">
-            <h2>Me Contacter</h2>
-            <div class="contact-content">
-                <p>N'hésitez pas à me contacter pour discuter de vos projets ou pour toute opportunité de collaboration !</p>
-                <div class="contact-links">
-                    <a href="https://github.com/Rom1du62" class="contact-link" target="_blank">
-                        <span>🐙</span> GitHub
-                    </a>
-                    <a href="mailto:ramatromain@yahoo.fr" class="contact-link">
-                        <span>📧</span> Email
-                    </a>
-                    <a href="https://www.linkedin.com/in/romain-ramat-470aba26/" class="contact-link" target="_blank">
-                        <span>🌐</span> LinkedIn                
-                    </a>
-                </div>
-            </div>
-        </section>
+      </div>
     </div>
-        <footer>
-            <p>&copy; 2025 Romain RAMAT. Tous droits réservés.</p>
-        </footer>
+  </div>
+</section>
+ 
+<!-- PROJETS -->
+<section id="projets" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Projets</div>
+      <h2>Ce que j'ai construit</h2>
+      <p class="section-desc">Projets d'études et personnels — chaque carte indique les compétences techniques <span style="color:var(--accent)">■</span> et comportementales <span style="color:var(--accent2)">■</span> mobilisées.</p>
     </div>
-
+    <div class="projects-grid">
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Le_grand_Marche_analyse_e-commerce/index.html" target="_blank">
+        <div class="project-thumb">🛒</div>
+        <div class="project-body">
+          <h3>Analyse des données d'un site e-commerce</h3>
+          <p>Élaboration de dashboards Excel, interprétation des indicateurs de performance et mise en œuvre des pratiques d'accessibilité.</p>
+          <div class="project-tags">
+            <span class="tag">Excel</span>
+            <span class="tag">Dashboard</span>
+            <span class="tag soft">Storytelling</span>
+            <span class="tag soft">Accessibilité</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Base_de_donnees_et_requetes_SQL/index.html" target="_blank">
+        <div class="project-thumb">🗄️</div>
+        <div class="project-body">
+          <h3>Conception d'une base de données SQL</h3>
+          <p>Modélisation complète avec Power Architect, dictionnaire de données et élaboration de requêtes SQL complexes.</p>
+          <div class="project-tags">
+            <span class="tag">SQLite</span>
+            <span class="tag">Power Architect</span>
+            <span class="tag soft">Rigueur</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Etude_sur_l_alimentation_dans_le_monde/index.html" target="_blank">
+        <div class="project-thumb">🥗</div>
+        <div class="project-body">
+          <h3>Analyse de l'alimentation dans le monde</h3>
+          <p>Manipulation de plusieurs fichiers CSV et interprétation des données mondiales avec Python et ses librairies de visualisation.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag soft">Vulgarisation</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Projet_Data_Immo/index.html" target="_blank">
+        <div class="project-thumb">🏠</div>
+        <div class="project-body">
+          <h3>Base de données immobilière (DVF)</h3>
+          <p>Modélisation en formes normales (1NF, 2NF, 3NF) à partir des données officielles DVF du gouvernement.</p>
+          <div class="project-tags">
+            <span class="tag">SQL</span>
+            <span class="tag">Normalisation</span>
+            <span class="tag soft">Organisation</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Analyse_des_donnees_Bottleneck/index.html" target="_blank">
+        <div class="project-thumb">🍷</div>
+        <div class="project-body">
+          <h3>Analyse statistique — société de spiritueux</h3>
+          <p>Approche statistique descriptive, étude des distributions et des corrélations pour conseiller la direction.</p>
+          <div class="project-tags">
+            <span class="tag">Statistiques</span>
+            <span class="tag">Python</span>
+            <span class="tag soft">Sens de la synthèse</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Dataviz_Sanitoral/index.html" target="_blank">
+        <div class="project-thumb">📊</div>
+        <div class="project-body">
+          <h3>Tableau de bord de suivi projet – Power BI</h3>
+          <p>Découverte et maîtrise de Power BI : intégration des données, tables de relations, DAX et Power Query.</p>
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Diagnostic_egalite_Femme-Homme/index.html" target="_blank">
+        <div class="project-thumb">⚖️</div>
+        <div class="project-body">
+          <h3>Égalité Femmes / Hommes en entreprise</h3>
+          <p>Mise en place d'un workflow no-code avec KNIME, de la reprise des données à la mise en forme, en conformité RGPD.</p>
+          <div class="project-tags">
+            <span class="tag">KNIME</span>
+            <span class="tag">RGPD</span>
+            <span class="tag soft">Pédagogie</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Analyse_des_ventes_Librairie/index.html" target="_blank">
+        <div class="project-thumb">🗺️</div>
+        <div class="project-body">
+          <h3>Analyse des ventes d'une librairie en ligne</h3>
+          <p>Tests statistiques et vérification d'hypothèses de corrélation avec SciPy sur les données réelles de ventes.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">SciPy</span>
+            <span class="tag soft">Rigueur</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Etude_insalubrite_dans_le_monde/index.html" target="_blank">
+        <div class="project-thumb">🚱</div>
+        <div class="project-body">
+          <h3>Dashboard – Insalubrité de l'eau dans le monde</h3>
+          <p>Dashboards interactifs Power BI pour identifier les pays candidats à des interventions humanitaires.</p>
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag soft">Créativité</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/La_poule_qui_chante/index.html" target="_blank">
+        <div class="project-thumb">🐓</div>
+        <div class="project-body">
+          <h3>Étude de marché par Machine Learning</h3>
+          <p>Analyse en composantes principales (ACP) et clustering pour identifier des segments cibles à l'international.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">ACP</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag soft">Autonomie</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Detection_de_faux_billets/index.html" target="_blank">
+        <div class="project-thumb">💸</div>
+        <div class="project-body">
+          <h3>Détection de faux billets par ML</h3>
+          <p>Utilisation des régressions linéaire et logistique, du clustering et de la cross-validation pour classer billets vrais et faux.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Régression logistique</span>
+            <span class="tag">Clustering</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+      <a class="project-card" href="https://rom1du62.github.io/Challenge_data/index.html" target="_blank">
+        <div class="project-thumb">⚠️</div>
+        <div class="project-body">
+          <h3>Challenge Data – Détection de fraude</h3>
+          <p>Projet personnel : obtenir un benchmark supérieur à 0,14 sur un jeu de données de fraude avec LightGBM.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">LightGBM</span>
+            <span class="tag soft">Curiosité</span>
+          </div>
+          <div class="project-link">Voir le projet →</div>
+        </div>
+      </a>
+ 
+    </div>
+  </div>
+</section>
+ 
+<!-- COMPETENCES -->
+<section id="competences">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Compétences</div>
+      <h2>Hard &amp; Soft Skills</h2>
+      <p class="section-desc">Compétences techniques et comportementales développées au fil des projets.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Hard Skills</h3>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Excel</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">KNIME</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Python</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">SQL</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Power BI</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Pandas / NumPy</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Scikit-learn</span><span class="skill-level">Intermédiaire</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Soft Skills</h3>
+        <div class="soft-grid" style="grid-template-columns:1fr 1fr;">
+          <div class="soft-card">
+            <div class="soft-icon">📖</div>
+            <h4>Storytelling</h4>
+            <p>Raconter la donnée en accrochant l'auditoire</p>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">🔍</div>
+            <h4>Curiosité</h4>
+            <p>Toujours approfondir et questionner les résultats</p>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">🔄</div>
+            <h4>Adaptabilité</h4>
+            <p>M'ajuster aux contraintes et aux besoins métier</p>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">💬</div>
+            <h4>Vulgarisation</h4>
+            <p>Rendre les concepts complexes accessibles</p>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">🤝</div>
+            <h4>Empathie</h4>
+            <p>Comprendre les enjeux et les besoins des équipes</p>
+          </div>
+          <div class="soft-card">
+            <div class="soft-icon">🎓</div>
+            <h4>Pédagogie</h4>
+            <p>Partager et transmettre mes connaissances</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- VEILLE -->
+<section id="veille" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-tag">Veille</div>
+      <h2>Mes sources de veille</h2>
+      <p class="section-desc">Pour rester à jour sur la data, l'IA et les outils analytiques, j'utilise ces deux plateformes au quotidien.</p>
+    </div>
+    <div class="veille-grid">
+      <a class="veille-card" href="https://feedly.com/i/my/me" target="_blank">
+        <div class="veille-icon">📱</div>
+        <div>
+          <h4>Feedly</h4>
+          <p>Agrégateur de flux RSS pour suivre les publications data, IA et tech en temps réel</p>
+        </div>
+      </a>
+      <a class="veille-card" href="https://wakelet.com/wake/tdfGL6eTwYiMYLiLbPJp8" target="_blank">
+        <div class="veille-icon">✉️</div>
+        <div>
+          <h4>Wakelet</h4>
+          <p>Curation et organisation des articles et ressources sélectionnés pour une veille structurée</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+ 
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <div class="section-tag" style="display:inline-block;margin-bottom:1rem;">Contact</div>
+      <h2>Travaillons ensemble</h2>
+      <p>Vous avez un projet data, une opportunité de collaboration ou simplement une question ? N'hésitez pas à me contacter — je réponds rapidement.</p>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:ramatromain@yahoo.fr">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          Email
+        </a>
+        <a class="contact-link" href="https://www.linkedin.com/in/romain-ramat-470aba26/" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a class="contact-link" href="https://github.com/Rom1du62" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<footer>
+  © 2025 Romain RAMAT — Data Analyst
+</footer>
+ 
+</body>
+</html>
